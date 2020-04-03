@@ -9,6 +9,7 @@ public class player_controller : MonoBehaviour
     Vector2 movement;
 
     public float speed;
+    string orientation;
 
     Rigidbody2D rb;
 
@@ -22,8 +23,12 @@ public class player_controller : MonoBehaviour
 
     void FixedUpdate () {
         rb.velocity = movement*speed;
-        if (rb.velocity.magnitude > 0) anim.Play("walk_front");
-        else anim.Play("idle_front");
+        if(rb.velocity.y < 0) orientation = "down";
+        if(rb.velocity.y > 0) orientation = "up";
+        if(orientation == "up" && rb.velocity.magnitude > 0) anim.Play("walk_back");
+        if(orientation == "up" && rb.velocity.magnitude == 0) anim.Play("idle_back");
+        if(orientation == "down" && rb.velocity.magnitude > 0) anim.Play("walk_front");
+        if(orientation == "down" && rb.velocity.magnitude == 0) anim.Play("idle_front");
     }
 
     void OnEnable () {
