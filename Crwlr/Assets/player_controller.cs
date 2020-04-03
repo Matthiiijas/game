@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class player_controller : MonoBehaviour
 {
+    Animator anim;
     InputMaster controls;
     Vector2 movement;
 
@@ -13,14 +14,16 @@ public class player_controller : MonoBehaviour
 
     void Awake () {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         controls = new InputMaster();
         controls.player.move.performed += ctx => movement = ctx.ReadValue<Vector2>();
     }
 
     void FixedUpdate () {
-        Debug.Log(movement.magnitude);
         rb.velocity = movement*speed;
+        if (rb.velocity.magnitude > 0) anim.Play("walk_front");
+        else anim.Play("idle_front");
     }
 
     void OnEnable () {
