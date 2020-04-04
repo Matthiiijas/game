@@ -8,7 +8,7 @@ public class player_controller : MonoBehaviour
     Animator anim;
     SpriteRenderer sr;
     InputMaster controls;
-    Vector2 movement;
+    Vector2 movement,moveremain,vel;
 
     public float speed;
     public string orientation;
@@ -24,41 +24,15 @@ public class player_controller : MonoBehaviour
     }
 
     void FixedUpdate () {
+        if(movement != Vector2.zero) moveremain = movement;
+        anim.SetFloat("MoveX", movement.x);
+        anim.SetFloat("MoveY", movement.y);
+        anim.SetFloat("LookX", moveremain.x);
+        anim.SetFloat("LookY", moveremain.y);
+        anim.SetFloat("Velocity", movement.magnitude);
         //Movement
+        movement = Vector2.ClampMagnitude(movement,1);
         rb.velocity = movement*speed;
-
-        //Get direction
-        float angle = Vector2.SignedAngle(movement,new Vector2(1,0));
-        Debug.Log(angle);
-        if(movement != Vector2.zero) {
-            if(angle < -135) orientation = "left";
-            else if(angle <= -45) orientation = "up";
-            else if(angle < 45) orientation = "right";
-            else if(angle <= 135) orientation = "down";
-            else orientation = "left";
-        }
-
-        //Animation
-        if(orientation == "left") {
-            sr.flipX = true;
-            if(rb.velocity.magnitude > 0) anim.Play("idle_side"); // walk_side
-            else anim.Play("idle_side");
-            }
-        if(orientation == "right") {
-            sr.flipX = false;
-            if(rb.velocity.magnitude > 0) anim.Play("idle_side"); //walk_side
-            else anim.Play("idle_side");
-            }
-        if(orientation == "up") {
-            sr.flipX = false;
-            if(rb.velocity.magnitude > 0) anim.Play("walk_back");
-            else anim.Play("idle_back");
-            }
-        if(orientation == "down") {
-            sr.flipX = false;
-            if(rb.velocity.magnitude > 0) anim.Play("walk_front");
-            else anim.Play("idle_front");
-            }
     }
 
     void OnEnable () {
