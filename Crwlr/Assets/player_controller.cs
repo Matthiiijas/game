@@ -8,7 +8,8 @@ public class player_controller : MonoBehaviour
     Animator anim;
     SpriteRenderer sr;
     InputMaster controls;
-    Vector2 movement,moveremain = new Vector2(0,-1) ,vel;
+    Vector2 movement,moveremain = new Vector2(0,-1), vel;
+    bool attack = false;
 
     public float speed;
     public string orientation;
@@ -21,15 +22,19 @@ public class player_controller : MonoBehaviour
 
         controls = new InputMaster();
         controls.player.move.performed += ctx => movement = ctx.ReadValue<Vector2>();
+        controls.player.Attack.started += ctx => attack = true;
+        controls.player.Attack.canceled += ctx => attack = false;
     }
 
     void FixedUpdate () {
+        Debug.Log(attack);
         if(movement != Vector2.zero) moveremain = movement;
-        anim.SetFloat("MoveX", movement.x);
-        anim.SetFloat("MoveY", movement.y);
+        anim.SetFloat("MoveX", rb.velocity.x);
+        anim.SetFloat("MoveY", rb.velocity.y);
         anim.SetFloat("LookX", moveremain.x);
         anim.SetFloat("LookY", moveremain.y);
         anim.SetFloat("Velocity", movement.magnitude);
+        anim.SetBool("Attack", attack);
         //Movement
         movement = Vector2.ClampMagnitude(movement,1);
         rb.velocity = movement*speed;

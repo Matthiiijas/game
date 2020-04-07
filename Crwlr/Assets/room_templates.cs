@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class room_templates : MonoBehaviour
 {
-    public GameObject[] bottom_rooms;
-    public GameObject[] top_rooms;
-    public GameObject[] left_rooms;
-    public GameObject[] right_rooms;
-    /*public GameObject[] not_bottom_rooms;
-    public GameObject[] not_top_rooms;
-    public GameObject[] not_left_rooms;
-    public GameObject[] not_right_rooms;*/
-    public GameObject[] barriers;
+    public GameObject leftRoom;
+    public GameObject rightRoom;
+    public GameObject bottomRoom;
+    public GameObject topRoom;
+
+    public GameObject leftBarrier;
+    public GameObject rightBarrier;
+    public GameObject bottomBarrier;
+    public GameObject topBarrier;
 
     public List<GameObject> rooms;
 
