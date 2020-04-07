@@ -8,7 +8,7 @@ public class player_controller : MonoBehaviour
     Animator anim;
     SpriteRenderer sr;
     InputMaster controls;
-    Vector2 movement,moveremain,vel;
+    Vector2 movement,moveremain = new Vector2(0,-1) ,vel;
 
     public float speed;
     public string orientation;

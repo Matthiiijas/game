@@ -8,6 +8,11 @@ public class room_templates : MonoBehaviour
     public GameObject[] top_rooms;
     public GameObject[] left_rooms;
     public GameObject[] right_rooms;
+    /*public GameObject[] not_bottom_rooms;
+    public GameObject[] not_top_rooms;
+    public GameObject[] not_left_rooms;
+    public GameObject[] not_right_rooms;*/
+    public GameObject[] barriers;
 
     public List<GameObject> rooms;
 
