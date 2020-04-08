@@ -6,7 +6,7 @@ public class room_spawner : MonoBehaviour
 {
     public string openingDir;
     private int rand;
-    private bool spawned = false;
+    private bool spawned = false, collision = false;
     public float prob;
     public int maxRooms;
     float delay;
@@ -21,7 +21,7 @@ public class room_spawner : MonoBehaviour
 
     void SpawnDecision() {
         prob = 1-templates.rooms.Count/maxRooms;
-        if(Random.Range(0.0f,1.0f) < prob) SpawnRoom();
+        if(Random.Range(0.0f,1.0f) < prob && !collision) SpawnRoom();
         else BlockDoor();
     }
 
@@ -42,6 +42,6 @@ public class room_spawner : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("spawn_point") && spawned == false) BlockDoor();
+        if(other.CompareTag("spawn_point") && !spawned) collision = true;
     }
 }

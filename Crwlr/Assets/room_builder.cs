@@ -18,11 +18,11 @@ public class room_builder : MonoBehaviour
 
     void Update() {
         playerPos = player.position - transform.position;
-        //if(playerPos.x > -8 && playerPos.x < 8 && playerPos.y > -4 && playerPos.y < 4) Debug.Log("inside " + gameObject.name);//LockRoom();
+        if(playerPos.x > -8 && playerPos.x < 8 && playerPos.y > -4 && playerPos.y < 4) LockRoom();
     }
 
     void LockRoom() {
-        //Instantiate(templates.barrier[5], transform.position, Quaternion.identity);
+        //Instantiate(templates.lockedRoom], transform.position, Quaternion.identity);
     }
 
 }

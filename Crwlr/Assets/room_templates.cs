@@ -14,6 +14,8 @@ public class room_templates : MonoBehaviour
     public GameObject bottomBarrier;
     public GameObject topBarrier;
 
+    public GameObject lockedRoom;
+
     public List<GameObject> rooms;
 
     public float waitTime;

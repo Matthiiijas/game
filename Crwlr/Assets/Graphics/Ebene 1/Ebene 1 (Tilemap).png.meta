@@ -254,6 +254,12 @@ TextureImporter:
   - first:
       213: 8991749178874669441
     second: Ebene 1 (Tilemap)_40
+  - first:
+      213: 7141544569837568737
+    second: Ebene 1 (Tilemap)_43
+  - first:
+      213: 9021912361806767248
+    second: Ebene 1 (Tilemap)_44
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -342,12 +348,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 462
+        x: 153
+        y: 479
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -363,12 +369,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_10
       rect:
         serializedVersion: 2
-        x: 17
-        y: 462
+        x: 170
+        y: 479
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -384,12 +390,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_11
       rect:
         serializedVersion: 2
-        x: 34
-        y: 462
+        x: 187
+        y: 479
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -405,12 +411,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_12
       rect:
         serializedVersion: 2
-        x: 51
-        y: 462
+        x: 204
+        y: 479
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -426,12 +432,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_13
       rect:
         serializedVersion: 2
-        x: 68
+        x: 0
         y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -447,12 +453,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_14
       rect:
         serializedVersion: 2
-        x: 85
+        x: 17
         y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -468,12 +474,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_15
       rect:
         serializedVersion: 2
-        x: 102
+        x: 34
         y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -489,12 +495,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_16
       rect:
         serializedVersion: 2
-        x: 119
+        x: 51
         y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -510,12 +516,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_17
       rect:
         serializedVersion: 2
-        x: 136
+        x: 68
         y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -531,12 +537,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_19
       rect:
         serializedVersion: 2
-        x: 17
-        y: 445
+        x: 102
+        y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -552,12 +558,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_20
       rect:
         serializedVersion: 2
-        x: 34
-        y: 445
+        x: 119
+        y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -573,12 +579,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_21
       rect:
         serializedVersion: 2
-        x: 51
-        y: 445
+        x: 136
+        y: 462
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -591,36 +597,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_22
+      name: Ebene 1 (Tilemap)_24
       rect:
         serializedVersion: 2
-        x: 68
+        x: 34
         y: 445
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d538b994cab329a00800000000000000
-      internalID: 761736898134377309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_24
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 428
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -636,12 +621,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_25
       rect:
         serializedVersion: 2
-        x: 34
-        y: 428
+        x: 51
+        y: 445
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -662,7 +647,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -683,7 +668,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -704,7 +689,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -725,7 +710,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -746,7 +731,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -767,7 +752,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -788,7 +773,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -809,7 +794,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -830,7 +815,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -846,12 +831,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_26
       rect:
         serializedVersion: 2
-        x: 51
-        y: 428
+        x: 68
+        y: 445
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -867,12 +852,12 @@ TextureImporter:
       name: Ebene 1 (Tilemap)_27
       rect:
         serializedVersion: 2
-        x: 68
-        y: 428
+        x: 102
+        y: 445
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -889,6 +874,27 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c611dafa768a0f4b0800000000000000
+      internalID: -5408637989189512852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_23
+      rect:
+        serializedVersion: 2
+        x: 17
         y: 445
         width: 16
         height: 16
@@ -899,8 +905,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34437b40660c53b00800000000000000
-      internalID: 807763252581184579
+      spriteID: ee28c207174142d30800000000000000
+      internalID: 4405668812921012974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_31
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f02f01c36cb6000800000000000000
+      internalID: 30335783792676739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_32
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66f4697be6c589e0800000000000000
+      internalID: -1619669776313551253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_33
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df97889530793a800800000000000000
+      internalID: 622507214150072829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_34
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b15d29c32433a30800000000000000
+      internalID: 4193768505940974381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_35
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d572b0bd8ef81d7d0800000000000000
+      internalID: -2895374855152392355
       vertices: []
       indices: 
       edges: []
