@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6414357982092620619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6414357982092620617}
+  - component: {fileID: 6414357982092620616}
+  m_Layer: 0
+  m_Name: room_templates
+  m_TagString: rooms
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6414357982092620617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414357982092620619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7199314, y: -0.69207686, z: -199.73471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6414357982092620616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414357982092620619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d85b765509e410caf2df21ff884db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftRoom: {fileID: 2126087539895447887, guid: 770c181c565c87558b3c6c228cb53a30,
+    type: 3}
+  rightRoom: {fileID: 2126087539895447887, guid: 81b5da98ee42ec7cea9a6e2eeb6c0904,
+    type: 3}
+  bottomRoom: {fileID: 2126087539895447887, guid: f3f1cf43b2b423924a26b137538eddde,
+    type: 3}
+  topRoom: {fileID: 2126087539895447887, guid: 59c25c49e351bfa5ea78126cb3effbb4, type: 3}
+  leftBarrier: {fileID: 2126087539895447887, guid: 53e6621ab452ca2a39343b85286c4c53,
+    type: 3}
+  rightBarrier: {fileID: 2126087539895447887, guid: 9f68d84160d0bcb759611f7aef4cae8f,
+    type: 3}
+  bottomBarrier: {fileID: 2126087539895447887, guid: a9ed3491a3ceb5869866b63798f81735,
+    type: 3}
+  topBarrier: {fileID: 2126087539895447887, guid: 2f9ffd0ca4ef36a36853bc71ce7e6bbd,
+    type: 3}
+  rooms: []
+  waitTime: 5
+  spawnedBoss: 0
+  boss: {fileID: 1968358003209248550, guid: 512d48171263fc7e59a9c2ae4527135d, type: 3}

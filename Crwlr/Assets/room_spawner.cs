@@ -5,18 +5,24 @@ using UnityEngine;
 public class room_spawner : MonoBehaviour
 {
     public string openingDir;
-    private string otherDir;
     private int rand;
     private bool spawned = false;
     public float prob;
+    public int maxRooms;
+    float delay;
 
     private room_templates templates;
 
     void Start() {
         templates = GameObject.FindGameObjectWithTag("rooms").GetComponent<room_templates>();
+        delay = Random.Range(0.0f,0.5f);
+        Invoke("SpawnDecision",delay);
+    }
 
-        if(Random.Range(0.0f,1.0f) < prob) Invoke("SpawnRoom",0.1f);
-        else Invoke("BlockDoor",0.1f);
+    void SpawnDecision() {
+        prob = 1-templates.rooms.Count/maxRooms;
+        if(Random.Range(0.0f,1.0f) < prob) SpawnRoom();
+        else BlockDoor();
     }
 
     void SpawnRoom() {
@@ -36,16 +42,6 @@ public class room_spawner : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("spawn_point") && /* other.GetComponent<room_spawner>().spawned == true && */spawned == false) BlockDoor();
-        /*if(other.CompareTag("spawn_point") && other.GetComponent<room_spawner>().spawned == false && spawned == false) {
-            Destroy(other.gameObject);
-            SpawnRoom();
-            otherDir = other.GetComponent<room_spawner>().openingDir;
-            Invoke("OpenUp",0.1f);
-        }*/
+        if(other.CompareTag("spawn_point") && spawned == false) BlockDoor();
     }
-
-    /*void OpenUp() {
-        if(otherDir == "left") Destroy(GameObject.Find)
-    }*/
 }

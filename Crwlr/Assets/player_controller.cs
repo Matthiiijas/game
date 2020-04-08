@@ -27,7 +27,6 @@ public class player_controller : MonoBehaviour
     }
 
     void FixedUpdate () {
-        Debug.Log(attack);
         if(movement != Vector2.zero) moveremain = movement;
         anim.SetFloat("MoveX", rb.velocity.x);
         anim.SetFloat("MoveY", rb.velocity.y);
