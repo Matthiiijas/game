@@ -9,6 +9,7 @@ TagManager:
   - not_point
   - enemy
   - locked_room
+  - attack_point
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - background
-  - 
+  - enemies
   - 
   - 
   - 

@@ -7,9 +7,15 @@ public class player_controller : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     SpriteRenderer sr;
+
+    Transform attackPoint;
+    public float attackRange;
+    public LayerMask enemyLayers;
+
     InputMaster controls;
     Vector2 movement,moveremain = new Vector2(0,-1), vel;
     bool attack = false;
+    bool attackedThisFrame = false;
 
     public float speed;
     public string orientation;
@@ -20,6 +26,8 @@ public class player_controller : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
 
+        attackPoint = GameObject.FindWithTag("attack_point").GetComponent<Transform>();
+
         controls = new InputMaster();
         controls.player.move.performed += ctx => movement = ctx.ReadValue<Vector2>();
         controls.player.Attack.started += ctx => attack = true;
@@ -27,6 +35,20 @@ public class player_controller : MonoBehaviour
     }
 
     void FixedUpdate () {
+        if(attack && !attackedThisFrame) {
+            Attack();
+            attackedThisFrame = true;
+        }
+        if(!attack) attackedThisFrame = false;
+
+        Animate();
+
+        //Movement
+        movement = Vector2.ClampMagnitude(movement,1);
+        rb.velocity = movement*speed;
+    }
+
+    void Animate() {
         if(movement != Vector2.zero) moveremain = movement;
         anim.SetFloat("MoveX", rb.velocity.x);
         anim.SetFloat("MoveY", rb.velocity.y);
@@ -34,9 +56,17 @@ public class player_controller : MonoBehaviour
         anim.SetFloat("LookY", moveremain.y);
         anim.SetFloat("Velocity", movement.magnitude);
         anim.SetBool("Attack", attack);
-        //Movement
-        movement = Vector2.ClampMagnitude(movement,1);
-        rb.velocity = movement*speed;
+    }
+
+    void Attack() {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach(Collider2D enemy in hitEnemies) {
+            Destroy(enemy.gameObject);
+        }
+    }
+
+    void OnDrawGizmosSelected() {
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     void OnEnable () {

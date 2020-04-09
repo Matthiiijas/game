@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2956701690991635929}
   m_Layer: 0
   m_Name: attackPoint
-  m_TagString: Untagged
+  m_TagString: attack_point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,6 +180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8718ee400f453f984862c3143917db5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackRange: 0
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 512
   speed: 7
   orientation: 
 --- !u!50 &590336424870786531

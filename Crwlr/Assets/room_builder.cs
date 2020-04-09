@@ -8,6 +8,7 @@ public class room_builder : MonoBehaviour
     private Vector2 playerPos;
 
     private bool locked = false;
+    private int rand;
 
     private room_templates templates;
 
@@ -25,6 +26,7 @@ public class room_builder : MonoBehaviour
         //Determine if player is inside this room
         if(playerPos.x > -8 && playerPos.x < 8 && playerPos.y > -4 && playerPos.y < 4) Invoke("LockRoom",0.1f);
         //Debug.Log(gameObject.name + " is locked: " + locked);
+
     }
 
     void LockRoom() {
@@ -32,7 +34,8 @@ public class room_builder : MonoBehaviour
 
             if(Random.Range(0.0f,1.0f) < 0.8f) {
                 Instantiate(templates.lockedRoom, transform.position, Quaternion.identity);
-                Instantiate(templates.enemyPrefabs[Random.Range(0,templates.enemyPrefabs.Length)], transform.position, Quaternion.identity);
+                rand = Random.Range(0,templates.enemyPrefabs.Length);
+                Instantiate(templates.enemyPrefabs[rand], transform.position, Quaternion.identity);
             }
             //Instantiate(templates.obstaclePrefabs[Random.Range(0,templates.obstaclePrefabs.Length)], transform.position, Quaternion.identity);
         }
