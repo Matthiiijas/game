@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class room_templates : MonoBehaviour
 {
-    public GameObject leftRoom;
-    public GameObject rightRoom;
-    public GameObject bottomRoom;
-    public GameObject topRoom;
-
-    public GameObject leftBarrier;
-    public GameObject rightBarrier;
-    public GameObject bottomBarrier;
-    public GameObject topBarrier;
-
+    public GameObject leftRoom, rightRoom, bottomRoom, topRoom;
+    public GameObject leftBarrier, rightBarrier, bottomBarrier, topBarrier;
     public GameObject lockedRoom;
+    public GameObject[] enemyPrefabs;
+    public GameObject[] obstaclePrefabs;
+    public GameObject[] itemPrefabs;
 
     public List<GameObject> rooms;
 

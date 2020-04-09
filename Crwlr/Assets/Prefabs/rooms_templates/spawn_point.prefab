@@ -94,4 +94,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDir: 
   prob: 1
-  maxRooms: 10
+  maxRooms: 15

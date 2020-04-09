@@ -8,6 +8,7 @@ TagManager:
   - spawn_point
   - not_point
   - enemy
+  - locked_room
   layers:
   - Default
   - TransparentFX

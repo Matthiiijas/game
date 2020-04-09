@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950269331694202802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6751306518213241822}
@@ -127,7 +127,7 @@ Tilemap:
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1
   - first: {x: 10, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -145,7 +145,7 @@ Tilemap:
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1
   - first: {x: 10, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -163,7 +163,7 @@ Tilemap:
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
+      m_AllTileFlags: 1
   - first: {x: 10, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -367,39 +367,27 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1989615362904786233}
     m_ColliderPaths:
-    - - X: 110000100
+    - - X: 100000041
+        Y: -20000100
+      - X: 110000041
+        Y: -20000100
+      - X: 110000100
         Y: -20000041
       - X: 110000100
         Y: 10000041
       - X: 110000041
         Y: 10000100
-      - X: 89999959
+      - X: 100000041
         Y: 10000100
-      - X: 89999900
+      - X: 100000100
         Y: 10000041
-      - X: 89999900
-        Y: 100
-      - X: 90000041
-        Y: 100
-      - X: 90000100
-        Y: 41
-      - X: 90000100
-        Y: -10000041
-      - X: 90000041
-        Y: -10000100
-      - X: 89999900
-        Y: -10000100
-      - X: 89999900
+      - X: 100000100
         Y: -20000041
-      - X: 89999959
-        Y: -20000100
-      - X: 110000041
-        Y: -20000100
   m_CompositePaths:
     m_Paths:
     - - {x: 10.999974, y: -2.00001}
       - {x: 10.999974, y: 1.00001}
-      - {x: 8.99999, y: 0.9999748}
-      - {x: 9.000026, y: -2.00001}
+      - {x: 10.00001, y: 0.9999748}
+      - {x: 10.000033, y: -2.00001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
