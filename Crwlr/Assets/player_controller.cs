@@ -13,7 +13,7 @@ public class player_controller : MonoBehaviour
     public LayerMask enemyLayers;
 
     InputMaster controls;
-    Vector2 movement,moveremain = new Vector2(0,-1), vel;
+    Vector2 inputMove, inputLook, remainLook = new Vector2(0,-1), vel;
     bool attack = false;
     bool attackedThisFrame = false;
 
@@ -29,9 +29,9 @@ public class player_controller : MonoBehaviour
         attackPoint = GameObject.FindWithTag("attack_point").GetComponent<Transform>();
 
         controls = new InputMaster();
-        controls.player.move.performed += ctx => movement = ctx.ReadValue<Vector2>();
-        controls.player.Attack.started += ctx => attack = true;
-        controls.player.Attack.canceled += ctx => attack = false;
+        controls.Player.Move.performed += ctx => inputMove = ctx.ReadValue<Vector2>();
+        controls.Player.Look.performed += ctx => inputLook = ctx.ReadValue<Vector2>();
+        controls.Player.Attack.started += ctx => Attack();
     }
 
     void FixedUpdate () {
@@ -44,30 +44,34 @@ public class player_controller : MonoBehaviour
         Animate();
 
         //Movement
-        movement = Vector2.ClampMagnitude(movement,1);
-        rb.velocity = movement*speed;
+        inputMove = Vector2.ClampMagnitude(inputMove,1);
+        rb.velocity = inputMove*speed;
     }
 
     void Animate() {
-        if(movement != Vector2.zero) moveremain = movement;
+        if(inputMove != Vector2.zero) remainLook = inputMove;
+        if(inputLook != Vector2.zero) remainLook = inputLook;
+
         anim.SetFloat("MoveX", rb.velocity.x);
         anim.SetFloat("MoveY", rb.velocity.y);
-        anim.SetFloat("LookX", moveremain.x);
-        anim.SetFloat("LookY", moveremain.y);
-        anim.SetFloat("Velocity", movement.magnitude);
-        anim.SetBool("Attack", attack);
+        anim.SetFloat("LookX", inputLook.x);
+        anim.SetFloat("LookY", inputLook.y);
+        anim.SetFloat("remainLookX", remainLook.x);
+        anim.SetFloat("remainLookY", remainLook.y);
+        anim.SetFloat("Velocity", inputMove.magnitude);
     }
 
     void Attack() {
+        anim.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach(Collider2D enemy in hitEnemies) {
             Destroy(enemy.gameObject);
         }
     }
 
-    void OnDrawGizmosSelected() {
+    /*void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-    }
+    }*/
 
     void OnEnable () {
         controls.Enable();

@@ -8,6 +8,7 @@ public class room_builder : MonoBehaviour
     private Vector2 playerPos;
 
     private bool locked = false;
+    private bool cleared = false;
     private int rand;
 
     private room_templates templates;
@@ -23,14 +24,16 @@ public class room_builder : MonoBehaviour
     void Update() {
         //Get players position relative to this room
         playerPos = player.position - transform.position;
-        //Determine if player is inside this room
-        if(playerPos.x > -8 && playerPos.x < 8 && playerPos.y > -4 && playerPos.y < 4) Invoke("LockRoom",0.1f);
         //Debug.Log(gameObject.name + " is locked: " + locked);
+        cleared = true;
+        if(locked) {
+            if(cleared) Debug.Log("cleared");
+        }
 
     }
 
     void LockRoom() {
-        if(locked == false) {
+        if(!locked) {
 
             if(Random.Range(0.0f,1.0f) < 0.8f) {
                 Instantiate(templates.lockedRoom, transform.position, Quaternion.identity);
@@ -39,8 +42,16 @@ public class room_builder : MonoBehaviour
             }
             //Instantiate(templates.obstaclePrefabs[Random.Range(0,templates.obstaclePrefabs.Length)], transform.position, Quaternion.identity);
         }
-
         locked = true;
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Player")) LockRoom();
+    }
+
+    void OnTriggerStay2D(Collider2D other) {
+        if(other.CompareTag("enemy")) cleared = false;
+        Debug.Log("enemy");
     }
 
 }
