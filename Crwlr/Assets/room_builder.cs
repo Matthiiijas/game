@@ -4,54 +4,48 @@ using UnityEngine;
 
 public class room_builder : MonoBehaviour
 {
-    private Transform player;
+    private GameObject player;
     private Vector2 playerPos;
+    public locker Locker;
 
-    private bool locked = false;
-    private bool cleared = false;
     private int rand;
+    public bool cleared = false;
+
+    GameObject enemies;
+    int enemyCount;
 
     private room_templates templates;
 
     void Awake() {
         templates = GameObject.FindGameObjectWithTag("rooms").GetComponent<room_templates>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        Locker = transform.Find("locked_room").gameObject.GetComponent<locker>();
 
         //Add this room to list of rooms
         templates.rooms.Add(this.gameObject);
+
+        rand = Random.Range(0,templates.enemyPrefabs.Length);
+        enemies = Instantiate(templates.enemyPrefabs[rand], transform);
     }
 
-    void Update() {
-        //Get players position relative to this room
-        playerPos = player.position - transform.position;
-        //Debug.Log(gameObject.name + " is locked: " + locked);
-        cleared = true;
-        if(locked) {
-            if(cleared) Debug.Log("cleared");
+    void LateUpdate() {
+        if(enemies.GetComponent<enemy_counter>().enemyList.Count == 0) {
+            Locker.Open();
+            cleared = true;
+            //Destroy(enemies.gameObject);
         }
 
-    }
-
-    void LockRoom() {
-        if(!locked) {
-
-            if(Random.Range(0.0f,1.0f) < 0.8f) {
-                Instantiate(templates.lockedRoom, transform.position, Quaternion.identity);
-                rand = Random.Range(0,templates.enemyPrefabs.Length);
-                Instantiate(templates.enemyPrefabs[rand], transform.position, Quaternion.identity);
-            }
-            //Instantiate(templates.obstaclePrefabs[Random.Range(0,templates.obstaclePrefabs.Length)], transform.position, Quaternion.identity);
-        }
-        locked = true;
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) LockRoom();
+        if(other.CompareTag("Player")) {
+            if(!cleared) Locker.Close();
+            player.GetComponent<player_controller>().transitioning = false;
+        }
     }
 
-    void OnTriggerStay2D(Collider2D other) {
-        if(other.CompareTag("enemy")) cleared = false;
-        Debug.Log("enemy");
+    void OnTriggerExit2D(Collider2D other) {
+        if(other.CompareTag("Player")) player.GetComponent<player_controller>().transitioning = true;
     }
 
 }

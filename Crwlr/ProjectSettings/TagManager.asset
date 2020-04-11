@@ -10,6 +10,7 @@ TagManager:
   - enemy
   - locked_room
   - attack_point
+  - Room
   layers:
   - Default
   - TransparentFX

@@ -13,9 +13,10 @@ public class player_controller : MonoBehaviour
     public LayerMask enemyLayers;
 
     InputMaster controls;
-    Vector2 inputMove, inputLook, remainLook = new Vector2(0,-1), vel;
+    Vector2 inputMove, realMove, inputLook, remainLook = new Vector2(0,-1), vel;
     bool attack = false;
     bool attackedThisFrame = false;
+    public bool transitioning = false;
 
     public float speed;
     public string orientation;
@@ -44,8 +45,9 @@ public class player_controller : MonoBehaviour
         Animate();
 
         //Movement
-        inputMove = Vector2.ClampMagnitude(inputMove,1);
-        rb.velocity = inputMove*speed;
+        if(!transitioning) realMove = Vector2.ClampMagnitude(inputMove,1);
+        else realMove.Normalize();
+        rb.velocity = realMove*speed;
     }
 
     void Animate() {
