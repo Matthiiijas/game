@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f21351530510d8d48999b80431a3f80a
+guid: 1808d31dc1634e24292717f28d5ba4f9
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -78,85 +78,7 @@ TextureImporter:
       213: 8985228416893836708
     second: Ebene 1 (Tilemap)_24
   - first:
-      213: -5771176498204822059
-    second: Ebene 1 (Tilemap)_0
-  - first:
-      213: -9070660906113269979
-    second: Ebene 1 (Tilemap)_1
-  - first:
-      213: -6230271200687586095
-    second: Ebene 1 (Tilemap)_2
-  - first:
-      213: -4981297151983966568
-    second: Ebene 1 (Tilemap)_3
-  - first:
-      213: 571442377158409922
-    second: Ebene 1 (Tilemap)_4
-  - first:
-      213: 518578709332140859
-    second: Ebene 1 (Tilemap)_5
-  - first:
-      213: 8535501109728549986
-    second: Ebene 1 (Tilemap)_6
-  - first:
-      213: 3043775432766601708
-    second: Ebene 1 (Tilemap)_7
-  - first:
-      213: 2068106282502744919
-    second: Ebene 1 (Tilemap)_8
-  - first:
-      213: 4114367964834148173
-    second: Ebene 1 (Tilemap)_9
-  - first:
-      213: -4625634337271761007
-    second: Ebene 1 (Tilemap)_10
-  - first:
-      213: 8768159024440156838
-    second: Ebene 1 (Tilemap)_11
-  - first:
-      213: -2525266633930811499
-    second: Ebene 1 (Tilemap)_12
-  - first:
-      213: 8195053880232521964
-    second: Ebene 1 (Tilemap)_13
-  - first:
-      213: -5939767350195560858
-    second: Ebene 1 (Tilemap)_14
-  - first:
-      213: 4852972655283564702
-    second: Ebene 1 (Tilemap)_15
-  - first:
-      213: -7378235075709535155
-    second: Ebene 1 (Tilemap)_16
-  - first:
-      213: 222305820333212395
-    second: Ebene 1 (Tilemap)_17
-  - first:
-      213: -5408637989189512852
-    second: Ebene 1 (Tilemap)_18
-  - first:
-      213: -2307499357093923858
-    second: Ebene 1 (Tilemap)_19
-  - first:
-      213: -8742864124492262103
-    second: Ebene 1 (Tilemap)_20
-  - first:
-      213: 2881630095654796747
-    second: Ebene 1 (Tilemap)_21
-  - first:
-      213: 761736898134377309
-    second: Ebene 1 (Tilemap)_22
-  - first:
-      213: -7240769337779633957
-    second: Ebene 1 (Tilemap)_23
-  - first:
-      213: -4417017375524230907
-    second: Ebene 1 (Tilemap)_24
-  - first:
       213: 7766836058310191771
-    second: Ebene 1 (Tilemap)_25
-  - first:
-      213: 5576458557532162666
     second: Ebene 1 (Tilemap)_25
   - first:
       213: -3768536479182178682
@@ -194,72 +116,6 @@ TextureImporter:
   - first:
       213: -2309986155813020994
     second: Ebene 1 (Tilemap)_37
-  - first:
-      213: 241843261497843944
-    second: Ebene 1 (Tilemap)_38
-  - first:
-      213: -7879080961489541978
-    second: Ebene 1 (Tilemap)_39
-  - first:
-      213: 5457013149051012346
-    second: Ebene 1 (Tilemap)_40
-  - first:
-      213: 1271825859233444504
-    second: Ebene 1 (Tilemap)_41
-  - first:
-      213: -8144361888147305979
-    second: Ebene 1 (Tilemap)_42
-  - first:
-      213: 8315941172020789164
-    second: Ebene 1 (Tilemap)_26
-  - first:
-      213: 7121918488307135614
-    second: Ebene 1 (Tilemap)_27
-  - first:
-      213: -468902247665513915
-    second: Ebene 1 (Tilemap)_28
-  - first:
-      213: 5377515634109076920
-    second: Ebene 1 (Tilemap)_29
-  - first:
-      213: -3117538939956420219
-    second: Ebene 1 (Tilemap)_30
-  - first:
-      213: -1893886054703888518
-    second: Ebene 1 (Tilemap)_31
-  - first:
-      213: 1715555509151735566
-    second: Ebene 1 (Tilemap)_32
-  - first:
-      213: -1467143204551920195
-    second: Ebene 1 (Tilemap)_33
-  - first:
-      213: -2018198771360610404
-    second: Ebene 1 (Tilemap)_34
-  - first:
-      213: 4078943387985155886
-    second: Ebene 1 (Tilemap)_35
-  - first:
-      213: 5479023684023922695
-    second: Ebene 1 (Tilemap)_36
-  - first:
-      213: 7252063544681588025
-    second: Ebene 1 (Tilemap)_37
-  - first:
-      213: 8763365776448180867
-    second: Ebene 1 (Tilemap)_38
-  - first:
-      213: -4955539561575957435
-    second: Ebene 1 (Tilemap)_39
-  - first:
-      213: 8991749178874669441
-    second: Ebene 1 (Tilemap)_40
-  - first:
-      213: 7141544569837568737
-    second: Ebene 1 (Tilemap)_43
-  - first:
-      213: 9021912361806767248
-    second: Ebene 1 (Tilemap)_44
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -303,7 +159,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15.9
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -357,300 +213,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_9
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 479
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4faf2b7ddb291930800000000000000
-      internalID: 4114367964834148173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_10
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 479
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1973112f3127ecfb0800000000000000
-      internalID: -4625634337271761007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_11
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 479
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a224e15d22cea970800000000000000
-      internalID: 8768159024440156838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_12
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 479
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5975869306374fcd0800000000000000
-      internalID: -2525266633930811499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce03276b51eaab170800000000000000
-      internalID: 8195053880232521964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_14
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66e5123b015b19da0800000000000000
-      internalID: -5939767350195560858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_15
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e907cd6fae8395340800000000000000
-      internalID: 4852972655283564702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_16
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4c710b4a4e3b9990800000000000000
-      internalID: -7378235075709535155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_17
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be2867c37f9c51300800000000000000
-      internalID: 222305820333212395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_19
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee379f47f8d1affd0800000000000000
-      internalID: -2307499357093923858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_20
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 925d124866b1ba680800000000000000
-      internalID: -8742864124492262103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_21
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 462
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcd3491fd4b9df720800000000000000
-      internalID: 2881630095654796747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_24
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 445
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 509662d691a93b2c0800000000000000
-      internalID: -4417017375524230907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_25
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 445
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6a4462438f836d40800000000000000
-      internalID: 5576458557532162666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Ebene 1 (Tilemap)_0
       rect:
         serializedVersion: 2
@@ -665,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d53b684d89a8efa0800000000000000
-      internalID: -5771176498204822059
+      spriteID: d8c77837d128b0200800000000000000
+      internalID: 147354475823594637
       vertices: []
       indices: 
       edges: []
@@ -686,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52f781dd6f98e1280800000000000000
-      internalID: -9070660906113269979
+      spriteID: 9c89abf88e95393b0800000000000000
+      internalID: -5506959063965329207
       vertices: []
       indices: 
       edges: []
@@ -707,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d48ba43a51a989a0800000000000000
-      internalID: -6230271200687586095
+      spriteID: 347cb19223064fcf0800000000000000
+      internalID: -219444713279994045
       vertices: []
       indices: 
       edges: []
@@ -728,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 896a45fd1a0eedab0800000000000000
-      internalID: -4981297151983966568
+      spriteID: 81915427db008a910800000000000000
+      internalID: 1848728460701538584
       vertices: []
       indices: 
       edges: []
@@ -749,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ceb12c70db2ee700800000000000000
-      internalID: 571442377158409922
+      spriteID: 118fbc97c4b58bc20800000000000000
+      internalID: 3222425917402642449
       vertices: []
       indices: 
       edges: []
@@ -770,8 +332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b33a2dda69c523700800000000000000
-      internalID: 518578709332140859
+      spriteID: 4fde83eee58b37440800000000000000
+      internalID: 4932488734763970036
       vertices: []
       indices: 
       edges: []
@@ -791,8 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26c92594901347670800000000000000
-      internalID: 8535501109728549986
+      spriteID: 5380899a26355ae70800000000000000
+      internalID: 9125791903153391669
       vertices: []
       indices: 
       edges: []
@@ -812,8 +374,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce93d1621a9ad3a20800000000000000
-      internalID: 3043775432766601708
+      spriteID: 4f08abaad58c8aa70800000000000000
+      internalID: 8838534573336461556
       vertices: []
       indices: 
       edges: []
@@ -833,18 +395,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75b6456e4b363bc10800000000000000
-      internalID: 2068106282502744919
+      spriteID: f7cd6b8cd73565d00800000000000000
+      internalID: 961047370193624191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_26
+      name: Ebene 1 (Tilemap)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d798bb3f44350c310800000000000000
+      internalID: 1423229037861112189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74553a29bb5bdd3d0800000000000000
+      internalID: -3180185944630012601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_11
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a31f28bfb90125b0800000000000000
+      internalID: -5395020159579647067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_12
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0801a7b171fdff0c0800000000000000
+      internalID: -4539664609027944320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_13
       rect:
         serializedVersion: 2
         x: 68
-        y: 445
+        y: 462
         width: 16
         height: 16
       alignment: 0
@@ -854,35 +500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caf385baf68286370800000000000000
-      internalID: 8315941172020789164
+      spriteID: 80cb3f8f139460c10800000000000000
+      internalID: 2019381961901194248
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_27
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 445
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e7475dea12326d260800000000000000
-      internalID: 7121918488307135614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_18
+      name: Ebene 1 (Tilemap)_14
       rect:
         serializedVersion: 2
         x: 85
@@ -896,14 +521,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c611dafa768a0f4b0800000000000000
-      internalID: -5408637989189512852
+      spriteID: 504d617a7d75a8ae0800000000000000
+      internalID: -1546326938315467771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_23
+      name: Ebene 1 (Tilemap)_15
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb484476a71f95c0800000000000000
+      internalID: -4206617523257848895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_16
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0d0979dd2e48030800000000000000
+      internalID: 3496168652104847549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_17
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 462
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8eafbe4c477ad080800000000000000
+      internalID: -9161879322309448054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_18
       rect:
         serializedVersion: 2
         x: 17
@@ -917,14 +605,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee28c207174142d30800000000000000
-      internalID: 4405668812921012974
+      spriteID: 34437b40660c53b00800000000000000
+      internalID: 807763252581184579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_31
+      name: Ebene 1 (Tilemap)_19
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 445
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6e7e48270a662e0800000000000000
+      internalID: -2132840959796844816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_20
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 445
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef0dcf00f470add0800000000000000
+      internalID: -2476851220647702553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 445
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c40640cdac325d0800000000000000
+      internalID: -3088401873130992539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ebene 1 (Tilemap)_25
       rect:
         serializedVersion: 2
         x: 17
@@ -938,14 +689,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38f02f01c36cb6000800000000000000
-      internalID: 30335783792676739
+      spriteID: b9a264c9e3859cb60800000000000000
+      internalID: 7766836058310191771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_32
+      name: Ebene 1 (Tilemap)_26
       rect:
         serializedVersion: 2
         x: 34
@@ -959,14 +710,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b66f4697be6c589e0800000000000000
-      internalID: -1619669776313551253
+      spriteID: 686be3be90873bbc0800000000000000
+      internalID: -3768536479182178682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_33
+      name: Ebene 1 (Tilemap)_27
       rect:
         serializedVersion: 2
         x: 51
@@ -980,14 +731,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df97889530793a800800000000000000
-      internalID: 622507214150072829
+      spriteID: ea0c52f730619bcf0800000000000000
+      internalID: -236133301186346834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_34
+      name: Ebene 1 (Tilemap)_28
       rect:
         serializedVersion: 2
         x: 68
@@ -1001,29 +752,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b15d29c32433a30800000000000000
-      internalID: 4193768505940974381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ebene 1 (Tilemap)_35
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 428
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d572b0bd8ef81d7d0800000000000000
-      internalID: -2895374855152392355
+      spriteID: e877153338cb2def0800000000000000
+      internalID: -84798171278903410
       vertices: []
       indices: 
       edges: []
