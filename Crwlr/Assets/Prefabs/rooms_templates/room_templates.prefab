@@ -60,6 +60,11 @@ MonoBehaviour:
     type: 3}
   lockedRoom: {fileID: 2126087539895447887, guid: 8902913186a783da9994aa865b5ee0c1,
     type: 3}
+  enemyPrefabs:
+  - {fileID: 8990377051852578464, guid: f2d1f3580f2976cde80573327c477bc4, type: 3}
+  - {fileID: 8990377051852578464, guid: 6d23577528ce996489db319a5fcb13ec, type: 3}
+  obstaclePrefabs: []
+  itemPrefabs: []
   rooms: []
   waitTime: 5
   spawnedBoss: 0

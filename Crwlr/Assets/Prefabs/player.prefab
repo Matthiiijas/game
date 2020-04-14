@@ -91,10 +91,11 @@ GameObject:
   m_Component:
   - component: {fileID: 590336424870786532}
   - component: {fileID: 590336424870786533}
-  - component: {fileID: 590336424870786534}
   - component: {fileID: 590336424870786531}
   - component: {fileID: 590336424870786530}
   - component: {fileID: 590336424870786529}
+  - component: {fileID: 590336424870786534}
+  - component: {fileID: 850151821006310007}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -168,24 +169,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &590336424870786534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590336424870786535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8718ee400f453f984862c3143917db5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 0.5
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  speed: 7
-  orientation: 
 --- !u!50 &590336424870786531
 Rigidbody2D:
   serializedVersion: 4
@@ -242,3 +225,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &590336424870786534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590336424870786535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8718ee400f453f984862c3143917db5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 0.5
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  speed: 7
+  transitioning: 0
+--- !u!114 &850151821006310007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590336424870786535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60260cdfdd91b526bb0a4b6d4b6dd4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 6
+  hitCoolDown: 1

@@ -9,19 +9,19 @@ public class player_controller : MonoBehaviour
     Animator anim;
     SpriteRenderer sr;
 
+    //Attack
     Transform attackPoint;
     public float attackRange;
     public LayerMask enemyLayers;
-
-    InputMaster controls;
-    Vector2 inputMove, realMove, inputLook, remainLook = new Vector2(0,-1), vel;
     bool attack = false;
     bool attackedThisFrame = false;
-    public bool transitioning = false;
 
+    //Move
+    InputMaster controls;
+    Vector2 inputMove, realMove, remainMove;
     public float speed;
-    public string orientation;
 
+    public bool transitioning = false;
 
     void Awake () {
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +32,6 @@ public class player_controller : MonoBehaviour
 
         controls = new InputMaster();
         controls.Player.Move.performed += ctx => inputMove = ctx.ReadValue<Vector2>();
-        controls.Player.Look.performed += ctx => inputLook = ctx.ReadValue<Vector2>();
         controls.Player.Attack.started += ctx => Attack();
     }
 
@@ -52,15 +51,12 @@ public class player_controller : MonoBehaviour
     }
 
     void Animate() {
-        if(inputMove != Vector2.zero) remainLook = inputMove;
-        if(inputLook != Vector2.zero) remainLook = inputLook;
+        if(inputMove != Vector2.zero) remainMove = inputMove;
 
         anim.SetFloat("MoveX", rb.velocity.x);
         anim.SetFloat("MoveY", rb.velocity.y);
-        anim.SetFloat("LookX", inputLook.x);
-        anim.SetFloat("LookY", inputLook.y);
-        anim.SetFloat("remainLookX", remainLook.x);
-        anim.SetFloat("remainLookY", remainLook.y);
+        anim.SetFloat("remainX", remainMove.x);
+        anim.SetFloat("remainY", remainMove.y);
         anim.SetFloat("Velocity", inputMove.magnitude);
     }
 
@@ -68,7 +64,7 @@ public class player_controller : MonoBehaviour
         anim.SetTrigger("Attack");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach(Collider2D enemy in hitEnemies) {
-            Destroy(enemy.gameObject);
+            enemy.gameObject.GetComponent<damage_manager>().TakeDamage(1,remainMove);
         }
     }
 
