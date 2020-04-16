@@ -9,12 +9,13 @@ public class damage_manager : MonoBehaviour
 
     public int healthPoints = 3;
     public float hitCoolDown = 1f;
-    float hitCoolDownTimer;
+    public float hitCoolDownTimer;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
+        hitCoolDownTimer = hitCoolDown;
     }
 
     void Update() {

@@ -41,6 +41,7 @@ public class room_builder : MonoBehaviour
         if(other.CompareTag("Player")) {
             if(!cleared) Locker.Close();
             player.GetComponent<player_controller>().transitioning = false;
+            //enemies.GetComponent<enemy_counter>().Enable();
         }
     }
 

@@ -63,6 +63,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 8990377051852578464, guid: f2d1f3580f2976cde80573327c477bc4, type: 3}
   - {fileID: 8990377051852578464, guid: 6d23577528ce996489db319a5fcb13ec, type: 3}
+  - {fileID: 4579747842247859112, guid: 4d18f5a39ca5554ef96d0aca169a67a2, type: 3}
   obstaclePrefabs: []
   itemPrefabs: []
   rooms: []
