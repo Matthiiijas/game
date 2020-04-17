@@ -27,8 +27,6 @@ public class slime_controller : MonoBehaviour
         randOffset = Random.insideUnitSphere * 0.5f;
         randOffset.z = 0.0f;
         target = player.position + ((transform.position - player.position).normalized * stopDistance) + randOffset;
-        Vector2 vel = target - transform.position;
-        if(currentDistance < chaseDistance) rb.velocity = vel;
-        if(currentDistance < 1.0f && Random.Range(0.0f,1.0f) < 0.02f && player != null) player.gameObject.GetComponent<damage_manager>().TakeDamage(1,Vector2.zero);
+        if(currentDistance < chaseDistance) rb.velocity = (Vector2) (target - transform.position);
     }
 }

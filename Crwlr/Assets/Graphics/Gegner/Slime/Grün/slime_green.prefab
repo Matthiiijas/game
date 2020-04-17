@@ -170,4 +170,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 3
-  hitCoolDown: 1
+  hitCoolDown: 0.2
+  hitCoolDownTimer: 0

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class room_builder : MonoBehaviour
 {
-    private GameObject player;
     private Vector2 playerPos;
     public locker Locker;
 
@@ -18,7 +17,6 @@ public class room_builder : MonoBehaviour
 
     void Awake() {
         templates = GameObject.FindGameObjectWithTag("rooms").GetComponent<room_templates>();
-        player = GameObject.FindGameObjectWithTag("Player");
         Locker = transform.Find("locked_room").gameObject.GetComponent<locker>();
 
         //Add this room to list of rooms
@@ -40,13 +38,13 @@ public class room_builder : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")) {
             if(!cleared) Locker.Close();
-            player.GetComponent<player_controller>().transitioning = false;
+            other.GetComponent<player_controller>().transitioning = false;
             //enemies.GetComponent<enemy_counter>().Enable();
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        if(other.CompareTag("Player")) player.GetComponent<player_controller>().transitioning = true;
+        if(other.CompareTag("Player")) other.GetComponent<player_controller>().transitioning = true;
     }
 
 }

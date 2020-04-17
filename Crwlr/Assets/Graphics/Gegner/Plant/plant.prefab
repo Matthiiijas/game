@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 2
-  hitCoolDown: 1
+  hitCoolDown: 0.2
   hitCoolDownTimer: 0
 --- !u!114 &2642334901297314135
 MonoBehaviour:
