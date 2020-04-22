@@ -17,12 +17,16 @@ public class player_controller : MonoBehaviour
     public float attackCoolDown, attackCoolDownTimer;
     public Vector3 attackOffset;
 
+    //Shoot
+    bool shooting;
+
     //Move
     InputMaster controls;
     Vector2 inputMove, realMove, remainMove;
+    public Vector2 transitionDir;
     public float speed;
 
-    public bool transitioning = false;
+    public bool transitioning = false, canMove = true;
 
     void Awake () {
         //Define Components
@@ -35,6 +39,8 @@ public class player_controller : MonoBehaviour
         controls = new InputMaster();
         controls.Player.Move.performed += ctx => inputMove = ctx.ReadValue<Vector2>();
         controls.Player.Attack.started += ctx => Attack();
+        controls.Player.Shoot.started += ctx => shooting = true;
+        controls.Player.Shoot.canceled += ctx => shooting = false;
         //Setup Attack Cooldown Timer
         attackCoolDownTimer = attackCoolDown;
     }
@@ -43,15 +49,17 @@ public class player_controller : MonoBehaviour
         //Attack Cooldown Timer
         if(attackCoolDownTimer > 0) attackCoolDownTimer -= Time.fixedDeltaTime;
         //Set position of attackPoint
-        if(inputMove != Vector2.zero) attackPoint.position = transform.position + attackOffset+ (Vector3) realMove.normalized * attackDistance;
+        if(inputMove != Vector2.zero) attackPoint.position = transform.position + attackOffset + (Vector3) inputMove.normalized * attackDistance;
 
         //Play Idle and Movement animations
         Animate();
 
         //Movement
-        if(!transitioning) realMove = Vector2.ClampMagnitude(inputMove,1);
-        else realMove.Normalize();
-        rb.velocity = realMove*speed;
+        if(canMove) rb.velocity = inputMove*speed;
+        else rb.velocity = Vector2.zero;
+
+        if(shooting) Aim();
+        else Shoot();
     }
 
     void Animate() {
@@ -79,6 +87,14 @@ public class player_controller : MonoBehaviour
             //Reset Cooldown Timer
             attackCoolDownTimer = attackCoolDown;
         }
+    }
+
+    void Aim() {
+        canMove = false;
+    }
+
+    void Shoot() {
+        canMove = true;
     }
 
     //Draw attackRange circle

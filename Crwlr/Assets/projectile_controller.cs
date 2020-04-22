@@ -12,8 +12,8 @@ public class projectile_controller : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
-            other.GetComponent<damage_manager>().TakeDamage(damageToDeal,rb.velocity);
+        if(!other.CompareTag("enemy") && !other.isTrigger) {
+            if(other.GetComponent<damage_manager>() != null) other.GetComponent<damage_manager>().TakeDamage(damageToDeal,rb.velocity);
             Destroy(gameObject);
         }
     }

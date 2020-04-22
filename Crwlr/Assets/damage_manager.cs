@@ -20,7 +20,7 @@ public class damage_manager : MonoBehaviour
 
     void Update() {
         if(healthPoints == 0) {
-            anim.SetBool("Dead",true);
+            //anim.SetBool("Dead",true);
             Destroy(gameObject, anim.GetCurrentAnimatorStateInfo(0).length);
         }
         if(hitCoolDownTimer > 0) hitCoolDownTimer -= Time.deltaTime;

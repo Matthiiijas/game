@@ -153,11 +153,6 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 590336424870786534, guid: 9a763ea74d5c774f186a3896f0f165b7,
-        type: 3}
-      propertyPath: attackCoolDown
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 590336424870786535, guid: 9a763ea74d5c774f186a3896f0f165b7,
         type: 3}
       propertyPath: m_Name
