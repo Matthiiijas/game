@@ -31,23 +31,11 @@ public class room_setup : MonoBehaviour
         doorRight = transform.Find("DoorRight").gameObject;
         doorBot = transform.Find("DoorBot").gameObject;
         doorTop = transform.Find("DoorTop").gameObject;
-        //Propietery: Disable doors
-        if(!refRoom.doorTop) {
-            doorTop.GetComponent<SpriteRenderer>().enabled = false;
-            doorTop.GetComponent<Animator>().SetTrigger("Close");
-        }
-        if(!refRoom.doorBot) {
-            doorBot.GetComponent<SpriteRenderer>().enabled = false;
-            doorBot.GetComponent<Animator>().SetTrigger("Close");
-        }
-        if(!refRoom.doorLeft) {
-            doorLeft.GetComponent<SpriteRenderer>().enabled = false;
-            doorLeft.GetComponent<Animator>().SetTrigger("Close");
-        }
-        if(!refRoom.doorRight) {
-            doorRight.GetComponent<SpriteRenderer>().enabled = false;
-            doorRight.GetComponent<Animator>().SetTrigger("Close");
-        }
+        //Disable doors
+        if(!refRoom.doorLeft) DisableDoor(doorLeft);
+        if(!refRoom.doorRight) DisableDoor(doorRight);
+        if(!refRoom.doorBot) DisableDoor(doorBot);
+        if(!refRoom.doorTop) DisableDoor(doorTop);
 
         if(type == roomType.Enemy) {
             enemySet = Instantiate(enemy,transform);
@@ -95,6 +83,12 @@ public class room_setup : MonoBehaviour
                 doorTop.GetComponent<Animator>().SetTrigger(action);
                 break;
         }
+    }
+
+    void DisableDoor(GameObject door) {
+        door.GetComponent<Animator>().SetTrigger("Close");
+        door.GetComponent<SpriteRenderer>().enabled = false;
+        door.transform.Find("DoorMask").gameObject.SetActive(false);
     }
     //Transition from one to another room
     void Transition(Direction direction) {
