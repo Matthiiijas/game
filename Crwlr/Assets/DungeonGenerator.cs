@@ -33,7 +33,7 @@ public class DungeonGenerator : MonoBehaviour
 
 
     void OnDrawGizmosSelected() {
-        Gizmos.DrawWireCube(new Vector3(16,9,0), Vector3.Scale((Vector3) worldSize, new Vector3(16,9,0)));
+        Gizmos.DrawWireCube(Vector3.zero, Vector3.Scale((Vector3) worldSize - new Vector3(1,1,0), new Vector3(16,9,0)));
     }
 
     void Start() {

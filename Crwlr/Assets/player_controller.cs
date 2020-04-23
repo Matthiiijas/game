@@ -57,7 +57,7 @@ public class player_controller : MonoBehaviour
         //Movement
         if(canMove) rb.velocity = inputMove*speed;
         else rb.velocity = Vector2.zero;
-        Debug.Log(inputMove);
+        
         if(shooting) Aim();
         else Shoot();
     }

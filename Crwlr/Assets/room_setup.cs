@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 enum Direction {
-    West, North, East, South,
+    West, North, East, South, All
 }
 
 public class room_setup : MonoBehaviour
@@ -14,16 +14,18 @@ public class room_setup : MonoBehaviour
     Vector2 playerPos;
     Direction playerLeft;
 
-    public bool roomActive;
+    public bool roomActive = false, cleared = false;
 
     Vector2 boxCastOffset;
     public Vector2 roomSize;
     public LayerMask Rooms;
 
     public Room refRoom;
-    public GameObject enemy;
+    public roomType type;
+    public GameObject enemy, enemySet;
 
     void Start() {
+        type = refRoom.type;
         //Get door objects
         doorLeft = transform.Find("DoorLeft").gameObject;
         doorRight = transform.Find("DoorRight").gameObject;
@@ -47,7 +49,9 @@ public class room_setup : MonoBehaviour
             doorRight.GetComponent<Animator>().SetTrigger("Close");
         }
 
-        if(refRoom.type == roomType.Enemy) Instantiate(enemy,transform);
+        if(type == roomType.Enemy) {
+            enemySet = Instantiate(enemy,transform);
+        }
         //Get player transform for transition
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
@@ -55,34 +59,40 @@ public class room_setup : MonoBehaviour
 
     void Update() {
         if(roomActive) {
-            if(Input.GetKey("f")) Door(Direction.West,"Close",true);
-            if(Input.GetKey("h")) Door(Direction.East,"Close",true);
-            if(Input.GetKey("g")) Door(Direction.South,"Close",true);
-            if(Input.GetKey("t")) Door(Direction.North,"Close",true);
+            if(Input.GetKey("f")) Door(Direction.West,"Close");
+            if(Input.GetKey("h")) Door(Direction.East,"Close");
+            if(Input.GetKey("g")) Door(Direction.South,"Close");
+            if(Input.GetKey("t")) Door(Direction.North,"Close");
         }
         //Define playsers position relative to room
         playerPos = (Vector2) (player.position - transform.position);
 
+        if(enemySet != null) if(enemySet.transform.childCount == 0) {
+            Door(Direction.All, "Open");
+            cleared = true;
+        }
     }
 
     //Close specific door (or all)
-    void Door(Direction direction, string action, bool first) {
+    void Door(Direction direction, string action) {
         switch(direction) {
             case Direction.West:
                 doorLeft.GetComponent<Animator>().SetTrigger(action);
-                //if(first) roomLeft.GetComponent<room_setup>().Door(Direction.East,action,false);
                 break;
             case Direction.East:
                 doorRight.GetComponent<Animator>().SetTrigger(action);
-                //if(first) roomRight.GetComponent<room_setup>().Door(Direction.West,action,false);
                 break;
             case Direction.South:
                 doorBot.GetComponent<Animator>().SetTrigger(action);
-                //if(first) roomBot.GetComponent<room_setup>().Door(Direction.North,action,false);
                 break;
             case Direction.North:
                 doorTop.GetComponent<Animator>().SetTrigger(action);
-                //if(first) roomTop.GetComponent<room_setup>().Door(Direction.South,action,false);
+                break;
+            case Direction.All:
+                doorLeft.GetComponent<Animator>().SetTrigger(action);
+                doorRight.GetComponent<Animator>().SetTrigger(action);
+                doorBot.GetComponent<Animator>().SetTrigger(action);
+                doorTop.GetComponent<Animator>().SetTrigger(action);
                 break;
         }
     }
@@ -103,6 +113,7 @@ public class room_setup : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")) {
             roomActive = true;
+            if(!cleared && type == roomType.Enemy) Door(Direction.All, "Close");
         }
     }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1288992635610056167}
   - component: {fileID: 1288992635610056166}
   - component: {fileID: 8818034949682852838}
+  - component: {fileID: 795859582975846904}
   m_Layer: 0
   m_Name: DoorBot
   m_TagString: Untagged
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -595085365
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 6891876865442329341, guid: f79751ecfd932f78d8fe287459d1857c,
     type: 3}
@@ -114,13 +115,32 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.25}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.5, y: 0}
   - {x: 0.5, y: 0}
+--- !u!251 &795859582975846904
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288992635610056160}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1288992635965683085
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +153,7 @@ GameObject:
   - component: {fileID: 1288992635965683072}
   - component: {fileID: 1288992635965683075}
   - component: {fileID: 6243084179094214326}
+  - component: {fileID: 3702028173627006476}
   m_Layer: 0
   m_Name: DoorRight
   m_TagString: Untagged
@@ -191,7 +212,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -595085365
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2776686786088596489, guid: 849b996022223b52ea95905af3ff3a30,
     type: 3}
@@ -235,13 +256,32 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.05, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: 0, y: -0.5}
   - {x: 0, y: 0.5}
+--- !u!251 &3702028173627006476
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288992635965683085}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 90
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1288992636264050318
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +358,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -595085365
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d26cb27bbd0818f299c0209b4b8ce313, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -344,11 +384,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomActive: 0
+  cleared: 0
   roomSize: {x: 16, y: 9}
   Rooms:
     serializedVersion: 2
     m_Bits: 1024
+  type: 0
   enemy: {fileID: 2111887583544340137, guid: 81be050231908a36d8daf87e4b7c1910, type: 3}
+  enemySet: {fileID: 0}
 --- !u!68 &7276753337162515787
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -424,6 +467,7 @@ GameObject:
   - component: {fileID: 1288992636460928644}
   - component: {fileID: 1288992636460928647}
   - component: {fileID: 6294162393898200956}
+  - component: {fileID: 350139189021683412}
   m_Layer: 0
   m_Name: DoorLeft
   m_TagString: Untagged
@@ -482,7 +526,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -595085365
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -2776686786088596489, guid: 31d2212a9afaf99ad8d6b39e173db522,
     type: 3}
@@ -526,13 +570,32 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.05, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: 0, y: -0.5}
   - {x: 0, y: 0.5}
+--- !u!251 &350139189021683412
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288992636460928641}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: -90
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1288992636622694478
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +608,7 @@ GameObject:
   - component: {fileID: 1288992636622694477}
   - component: {fileID: 1288992636622694476}
   - component: {fileID: 7066063309630584060}
+  - component: {fileID: 3043593429255935190}
   m_Layer: 0
   m_Name: DoorTop
   m_TagString: Untagged
@@ -603,7 +667,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -595085365
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 5777258581176554988, guid: 08a53e2a2c3b9c4b19ed564edb3c6d3e,
     type: 3}
@@ -647,13 +711,32 @@ EdgeCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.5, y: 0}
   - {x: 0.5, y: 0}
+--- !u!251 &3043593429255935190
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288992636622694478}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 180
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &4078190621071052902
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +805,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -595085365
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 59c3611c02d4af873ba55624fe9ba1e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.77254903}
