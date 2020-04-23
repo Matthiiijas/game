@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8389188056715806264}
   - component: {fileID: 5895512543254594266}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,6 +379,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2016106104433025789, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}
       propertyPath: m_Name
@@ -469,10 +474,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2016106104433025789, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}
       propertyPath: m_Name
       value: DoorBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171455, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}
@@ -559,10 +574,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2016106104433025789, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}
       propertyPath: m_Name
       value: DoorLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171455, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}
@@ -663,6 +688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BackSortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016106104433025789, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7283756118456734336}
   - component: {fileID: 696900818471683480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DoorMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5511770225917171452}
   - component: {fileID: 4580553398668020300}
   - component: {fileID: 8620965220805782118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
