@@ -14,6 +14,5 @@ public class light_flicker : MonoBehaviour
 
     void Update() {
         light.intensity = Mathf.Lerp(light.intensity, Random.Range(minIntensity, maxIntensity), flickerSmoothness);
-        Debug.Log("yeah");
     }
 }

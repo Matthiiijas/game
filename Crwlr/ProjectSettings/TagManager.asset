@@ -23,7 +23,7 @@ TagManager:
   - 
   - background
   - enemies
-  - 
+  - Rooms
   - 
   - 
   - 
@@ -49,9 +49,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 2309665673
+  - name: Rooms
+    uniqueID: 3699881931
     locked: 0
   - name: Objects
     uniqueID: 2341129603
+    locked: 0
+  - name: UI
+    uniqueID: 2309665673
     locked: 0
