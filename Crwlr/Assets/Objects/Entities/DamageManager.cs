@@ -19,7 +19,7 @@ public class DamageManager : MonoBehaviour
     }
 
     void Update() {
-        if(healthPoints == 0) {
+        if(healthPoints == 0 && !gameObject.CompareTag("Player")) {
             //anim.SetBool("Dead",true);
             Destroy(gameObject, anim.GetCurrentAnimatorStateInfo(0).length);
         }

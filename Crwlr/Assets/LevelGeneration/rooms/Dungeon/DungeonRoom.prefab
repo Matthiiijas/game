@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7276753337162515787}
   - component: {fileID: 304749468996878528}
   m_Layer: 10
-  m_Name: room
+  m_Name: DungeonRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,13 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1636cec210cce9169d47340f8e001e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionDistance: 2
+  type: 0
   roomActive: 0
   cleared: 0
-  roomSize: {x: 16, y: 9}
-  Rooms:
-    serializedVersion: 2
-    m_Bits: 1024
-  type: 0
   enemy: {fileID: 2111887583544340137, guid: 81be050231908a36d8daf87e4b7c1910, type: 3}
   enemySet: {fileID: 0}
 --- !u!68 &7276753337162515787
@@ -272,9 +269,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -595085365
-  m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingLayerID: -1953837693
+  m_SortingLayer: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 59c3611c02d4af873ba55624fe9ba1e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.77254903}
   m_FlipX: 0

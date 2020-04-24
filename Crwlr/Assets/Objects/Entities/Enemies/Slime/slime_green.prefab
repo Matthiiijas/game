@@ -154,9 +154,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132adbe5ce96c90bda069b2061b14d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  attackSpeed: 5
+  retreatSpeed: 3
   currentDistance: 0
-  stopDistance: 1
+  stopDistance: 1.5
   chaseDistance: 8
+  animationMinVelocity: 0.1
 --- !u!114 &5612290967851775191
 MonoBehaviour:
   m_ObjectHideFlags: 0
