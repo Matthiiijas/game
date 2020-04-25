@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4873211263741403844}
   - component: {fileID: 5612290967851775191}
   m_Layer: 9
-  m_Name: slime_green
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132adbe5ce96c90bda069b2061b14d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: 11add59272e3119a88e0fa5bcb3d961b, type: 2}
   speed: 5
   attackSpeed: 5
   retreatSpeed: 3

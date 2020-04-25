@@ -182,7 +182,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 20
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -247,7 +247,7 @@ MonoBehaviour:
   attackCoolDownTimer: 0
   attackOffset: {x: 0, y: 0.2, z: 0}
   transitionDir: {x: 0, y: 0}
-  speed: 7
+  speed: 100
   transitioning: 0
   canMove: 1
 --- !u!114 &850151821006310007

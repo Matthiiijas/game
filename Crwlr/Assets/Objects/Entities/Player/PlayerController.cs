@@ -56,8 +56,7 @@ public class PlayerController : MonoBehaviour
         Animate();
 
         //Movement
-        if(canMove) rb.velocity = inputMove*speed;
-        else rb.velocity = Vector2.zero;
+        if(canMove) rb.AddForce(inputMove * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
 
         if(shooting) Aim();
         else Shoot();

@@ -6,6 +6,7 @@ public class SlimeController : MonoBehaviour
 {
     Animator anim;
     Rigidbody2D rb;
+    Material mat;
     Transform player;
 
     public float speed;
@@ -23,6 +24,9 @@ public class SlimeController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        mat = GetComponent<SpriteRenderer>().material;
+
+        mat.SetColor("_Color",Random.ColorHSV(100f/256f, 150f/256f, 0.5f, 0.7f, 0.5f, 0.7f));
     }
 
     void FixedUpdate() {
@@ -36,7 +40,7 @@ public class SlimeController : MonoBehaviour
     }
 
     IEnumerator Attack(Vector3 target) {
-        rb.AddForce((Vector2) (target - transform.position) * attackSpeed, ForceMode2D.Impulse);
+        rb.AddForce((Vector2) (target - transform.position).normalized * attackSpeed, ForceMode2D.Impulse);
         attacking = true;
         yield return new WaitForSeconds(1);
         attacking = false;

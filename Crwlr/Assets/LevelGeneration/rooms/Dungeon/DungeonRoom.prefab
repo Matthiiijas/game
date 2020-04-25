@@ -476,6 +476,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4580553398668020300, guid: dcbf34502c01fec28bb9392f1161d1c2,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5511770225917171454, guid: dcbf34502c01fec28bb9392f1161d1c2,
         type: 3}
       propertyPath: m_Name
