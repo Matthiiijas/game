@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132adbe5ce96c90bda069b2061b14d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 11add59272e3119a88e0fa5bcb3d961b, type: 2}
   speed: 5
   attackSpeed: 5
   retreatSpeed: 3
@@ -177,3 +176,5 @@ MonoBehaviour:
   healthPoints: 3
   hitCoolDown: 0.2
   hitCoolDownTimer: 0
+  droppables:
+  - {fileID: 5181250419495385213, guid: 26d153eb34312a330835ba380cbeab33, type: 3}

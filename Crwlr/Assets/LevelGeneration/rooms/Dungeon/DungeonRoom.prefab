@@ -138,6 +138,7 @@ MonoBehaviour:
   roomActive: 0
   cleared: 0
   enemy: {fileID: 2111887583544340137, guid: 81be050231908a36d8daf87e4b7c1910, type: 3}
+  boss: {fileID: 4619110263577936356, guid: 65a2ef680f8d1b3cb891e74b76786121, type: 3}
   enemySet: {fileID: 0}
 --- !u!68 &7276753337162515787
 EdgeCollider2D:

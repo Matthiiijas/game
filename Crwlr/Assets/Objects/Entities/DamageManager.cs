@@ -11,6 +11,11 @@ public class DamageManager : MonoBehaviour
     public float hitCoolDown = 1f;
     public float hitCoolDownTimer;
 
+    bool dead;
+
+    public GameObject[] droppables;
+    GameObject droppedItem;
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -20,7 +25,9 @@ public class DamageManager : MonoBehaviour
 
     void Update() {
         if(healthPoints == 0 && !gameObject.CompareTag("Player")) {
-            //anim.SetBool("Dead",true);
+            if(!dead) droppedItem = Instantiate(droppables[Random.Range(0,droppables.Length)],transform.position, Quaternion.identity);
+            droppedItem.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            dead = true;
             Destroy(gameObject, anim.GetCurrentAnimatorStateInfo(0).length);
         }
         if(hitCoolDownTimer > 0) hitCoolDownTimer -= Time.deltaTime;

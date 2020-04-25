@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackCoolDown, attackCoolDownTimer;
     public Vector3 attackOffset;
+    float collectEnemiesTime;
+    Collider2D[] hitEnemies;
 
     //Shoot
     bool shooting;
@@ -78,8 +80,12 @@ public class PlayerController : MonoBehaviour
         if(attackCoolDownTimer <= 0) {
             //Play attack animation
             anim.SetTrigger("Attack");
+            collectEnemiesTime = anim.GetCurrentAnimatorStateInfo(0).length;
             //Collect all enemies in attackRange an -Distance...
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            while(collectEnemiesTime > 0) {
+                hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+                collectEnemiesTime -= Time.deltaTime;
+            }
             foreach(Collider2D enemy in hitEnemies) {
                 //...and deal damage
                 enemy.gameObject.GetComponent<DamageManager>().TakeDamage(1,remainMove*knockBack);

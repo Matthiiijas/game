@@ -31,6 +31,7 @@ public class RoomBuilder : MonoBehaviour
     [Space(10)]
     [Header("Enemy Prefabs to use if type is \"Enemy\"")]
     public GameObject enemy;
+    public GameObject boss;
     [Space(10)]
     [Tooltip("Instantiated Enemy Prefab")]
     public GameObject enemySet;
@@ -55,6 +56,9 @@ public class RoomBuilder : MonoBehaviour
 
         if(type == roomType.Enemy) {
             enemySet = Instantiate(enemy,transform);
+        }
+        else if(type == roomType.Boss) {
+            enemySet = Instantiate(boss,transform);
         }
         //Get player transform for transition
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
