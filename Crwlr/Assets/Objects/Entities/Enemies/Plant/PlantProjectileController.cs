@@ -12,8 +12,8 @@ public class PlantProjectileController : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(!other.CompareTag("enemy") && !other.isTrigger) {
-            if(other.GetComponent<DamageManager>() != null) other.GetComponent<DamageManager>().TakeDamage(damageToDeal,rb.velocity);
+        if(!other.CompareTag("Enemy") && !other.CompareTag("Item") && !other.isTrigger) {
+            if(other.GetComponent<DamageManager>() != null) other.GetComponent<DamageManager>().TakeDamage(damageToDeal,rb.velocity, 0);
             Destroy(gameObject);
         }
     }

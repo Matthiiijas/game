@@ -5,13 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - rooms
-  - spawn_point
-  - not_point
-  - enemy
   - locked_room
   - attack_point
   - Room
   - Hearth
+  - GameManager
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -22,11 +21,11 @@ TagManager:
   - 
   - 
   - background
-  - enemies
+  - Enemies
   - Rooms
-  - 
-  - 
-  - 
+  - Player
+  - Containers
+  - Items
   - 
   - 
   - 

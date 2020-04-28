@@ -9,22 +9,26 @@ public class PlantController : MonoBehaviour
     Vector3 playerPos;
 
     public GameObject projectilePrefab, projectile;
-    public float speed;
+    public float shootWaitTime, shootTimer;
+    public float projectileSpeed;
     public float shootRange, shootDelay;
     public Vector3 shootOffset;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         anim = GetComponent<Animator>();
+        shootTimer = shootWaitTime;
     }
 
     void Update() {
         playerPos = player.position - transform.position - shootOffset;
         anim.SetFloat("PlayerPos", playerPos.x);
-        if(Random.Range(0.0f,1.0f) < 0.01f && Vector3.Distance(player.position, transform.position) < shootRange) StartCoroutine(Shoot(playerPos.normalized));
+        if(shootTimer <= 0 && Vector3.Distance(player.position, transform.position) < shootRange) StartCoroutine(SingleShoot(playerPos.normalized));
+        shootTimer -= Time.deltaTime;
     }
 
-    IEnumerator Shoot(Vector3 direction) {
+    IEnumerator SingleShoot(Vector3 direction) {
+        shootTimer = shootWaitTime;
         //Play attack animation
         anim.SetTrigger("Attack");
         //wait for animation
@@ -32,6 +36,6 @@ public class PlantController : MonoBehaviour
         //Spawn projectile with velocity towards current player position
         projectile = Instantiate(projectilePrefab, transform);
         projectile.transform.position += shootOffset;
-        projectile.GetComponent<Rigidbody2D>().velocity = (Vector2) direction * speed;
+        projectile.GetComponent<Rigidbody2D>().velocity = (Vector2) direction * projectileSpeed;
     }
 }

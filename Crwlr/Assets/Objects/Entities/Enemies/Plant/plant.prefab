@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 4782375522455110974}
   - component: {fileID: 2642334901297314134}
   - component: {fileID: 2642334901297314135}
+  - component: {fileID: -9104104679388190016}
   m_Layer: 9
   m_Name: plant
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 11add59272e3119a88e0fa5bcb3d961b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,9 +166,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60260cdfdd91b526bb0a4b6d4b6dd4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 2
+  hitSound: {fileID: 8300000, guid: ac0e424ec30c862608c0b24ece503df1, type: 3}
+  healthPoints: 0
+  maxHealthPoints: 2
   hitCoolDown: 0.2
   hitCoolDownTimer: 0
+  dead: 0
+  dropCount: 2
+  drops:
+  - item: {fileID: 7865905926999770056, guid: 79aa43b3415db1d40a77edeb1acd2ee4, type: 3}
+    probability: 0.2
+  - item: {fileID: 7865905926999770056, guid: 5eae1af23569f180aa8b3aaf8096fb5e, type: 3}
+    probability: 0.1
+  - item: {fileID: 5181250419495385213, guid: 26d153eb34312a330835ba380cbeab33, type: 3}
+    probability: 0.35
+  - item: {fileID: 8799471185818661518, guid: 3c3197c236d35b759a7188748ebecb3f, type: 3}
+    probability: 0.35
 --- !u!114 &2642334901297314135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +197,22 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5720396911657207012, guid: 624c2b9af893edf0fb630bb2d835ede6,
     type: 3}
   projectile: {fileID: 0}
-  speed: 10
+  shootWaitTime: 2
+  shootTimer: 0
+  projectileSpeed: 5
   shootRange: 10
   shootDelay: 0.4
   shootOffset: {x: 0, y: 0.5, z: 0}
+--- !u!114 &-9104104679388190016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2642334901297314131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1922d53b5411a2c2a3d0a49eb9b87d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0

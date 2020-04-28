@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Inspired by Six Dot
 public class LevelGenerator : MonoBehaviour
 {
     [Header("Preferences for generation")]
@@ -19,7 +20,10 @@ public class LevelGenerator : MonoBehaviour
     [Tooltip("Prefab to use for standard room")]
     public GameObject roomPrefab;
     [Tooltip("Probability to spawn enemies in a room")]
-    public float enemySpawnrate = 0.8f;
+    public float enemySpawnrate = 0.7f;
+    [Tooltip("Probability to spawn a chest in a room")]
+    public float chestSpawnrate = 0.2f;
+    float randomPoint;
     [Tooltip("Probability for rooms to clump together (descending)")]
     public float startProb = 0.2f, endProb = 0.01f;
     float currentProb = 0.2f;
@@ -36,7 +40,7 @@ public class LevelGenerator : MonoBehaviour
         Gizmos.DrawWireCube(Vector3.zero, Vector3.Scale((Vector3) worldSize - new Vector3(1,1,0), new Vector3(16,9,0)));
     }
 
-    void Start() {
+    void Awake() {
         if(numberOfRooms >= worldSize.x * worldSize.y) {
             numberOfRooms = Mathf.RoundToInt(worldSize.x * worldSize.y);
             Debug.LogError("Too many rooms for worldsize, set Number of rooms to " + numberOfRooms);
@@ -65,9 +69,13 @@ public class LevelGenerator : MonoBehaviour
             //Grab random valid position
             checkPos = NewPosition();
             //Choose type of room
+            randomPoint = Random.value;
             if(i < numberOfRooms-1) {
-                if(Random.value < enemySpawnrate) currentType = roomType.Enemy;
-                else currentType = roomType.Empty;
+                if(randomPoint < enemySpawnrate) currentType = roomType.Enemy;
+                else {
+                    randomPoint -= enemySpawnrate;
+                    if(randomPoint < chestSpawnrate) currentType = roomType.Chest;
+                }
             }
             else currentType = roomType.Boss;
             //Create this room with determined position and type
@@ -138,6 +146,13 @@ public class LevelGenerator : MonoBehaviour
                 //Check neighbour right
                 if(x+1 >= gridSizeX) rooms[x,y].doorRight = false;
                 else rooms[x,y].doorRight = rooms[x+1,y] != null;
+
+                if(rooms[x,y].type == roomType.Boss) {
+                    if(y-1 >= 0 && rooms[x,y-1] != null) rooms[x,y-1].doorBossTop = true;
+                    if(y+1 < gridSizeY && rooms[x,y+1] != null) rooms[x,y+1].doorBossBot = true;
+                    if(x-1 >= 0 && rooms[x-1,y] != null) rooms[x-1,y].doorBossRight = true;
+                    if(x+1 < gridSizeX && rooms[x+1,y] != null) rooms[x+1,y].doorBossLeft = true;
+                }
             }
         }
     }

@@ -13,6 +13,7 @@ public class RoomBuilder : MonoBehaviour
     Transform player;
     Vector2 playerPos;
     Direction playerLeft;
+    GameManager gameManager;
 
     [Header("Player interaction")]
     [Tooltip("How far player is teleported when leaving a room")]
@@ -29,18 +30,17 @@ public class RoomBuilder : MonoBehaviour
     public bool cleared = false;
 
     [Space(10)]
-    [Header("Enemy Prefabs to use if type is \"Enemy\"")]
+    [Header("Prefabs to use if type is \"Enemy\"")]
     public GameObject enemy;
+    public GameObject chest;
     public GameObject boss;
     [Space(10)]
     [Tooltip("Instantiated Enemy Prefab")]
-    public GameObject enemySet;
-
-    /*Vector2 boxCastOffset;
-    public Vector2 roomSize;
-    public LayerMask Rooms;*/
+    public GameObject roomContent;
+    public bool test;
 
     void Start() {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         if(refRoom == null) refRoom = new Room(transform.position, type);
         type = refRoom.type;
         //Get door objects
@@ -55,10 +55,13 @@ public class RoomBuilder : MonoBehaviour
         if(!refRoom.doorTop) DisableDoor(doorTop);
 
         if(type == roomType.Enemy) {
-            enemySet = Instantiate(enemy,transform);
+            roomContent = Instantiate(enemy,transform);
+        }
+        if(type == roomType.Chest) {
+            roomContent = Instantiate(chest,transform);
         }
         else if(type == roomType.Boss) {
-            enemySet = Instantiate(boss,transform);
+            roomContent = Instantiate(boss,transform);
         }
         //Get player transform for transition
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -66,21 +69,21 @@ public class RoomBuilder : MonoBehaviour
     }
 
     void Update() {
-        if(roomActive) {
-            if(Input.GetKey("f")) Door(Direction.West,"Close");
-            if(Input.GetKey("h")) Door(Direction.East,"Close");
-            if(Input.GetKey("g")) Door(Direction.South,"Close");
-            if(Input.GetKey("t")) Door(Direction.North,"Close");
-        }
+        if(refRoom.doorBossLeft) BossDoor(Direction.West);
+        if(refRoom.doorBossRight) BossDoor(Direction.East);
+        if(refRoom.doorBossBot) BossDoor(Direction.South);
+        if(refRoom.doorBossTop) BossDoor(Direction.North);
         //Define playsers position relative to room
         playerPos = (Vector2) (player.position - transform.position);
 
-        if(enemySet != null) {
-            if(!enemySet.GetComponent<EnemySetManager>().Active && roomActive) enemySet.GetComponent<EnemySetManager>().Active = true;
-            if(enemySet.transform.childCount == 0) {
+        if(type == roomType.Enemy) {
+            if(roomContent.GetComponent<EnemySetManager>().Active && roomContent.transform.childCount == 0) {
                 Door(Direction.All, "Open");
                 cleared = true;
             }
+        }
+        if(type == roomType.Boss) {
+            if(roomContent == null) gameManager.FinishLevel();
         }
     }
 
@@ -108,8 +111,25 @@ public class RoomBuilder : MonoBehaviour
         }
     }
 
+    void BossDoor(Direction direction) {
+        switch(direction) {
+            case Direction.West:
+                doorLeft.transform.Find("BossFrame").gameObject.SetActive(true);
+                break;
+            case Direction.East:
+                doorRight.transform.Find("BossFrame").gameObject.SetActive(true);
+                break;
+            case Direction.South:
+                doorBot.transform.Find("BossFrame").gameObject.SetActive(true);
+                break;
+            case Direction.North:
+                doorTop.transform.Find("BossFrame").gameObject.SetActive(true);
+                break;
+        }
+    }
+
     void DisableDoor(GameObject door) {
-        door.GetComponent<Animator>().SetTrigger("Close");
+        door.GetComponent<Animator>().SetBool("Inactive", true);
         door.GetComponent<SpriteRenderer>().enabled = false;
         door.transform.Find("DoorMask").gameObject.SetActive(false);
     }
@@ -130,7 +150,10 @@ public class RoomBuilder : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")) {
             roomActive = true;
-            if(!cleared && type == roomType.Enemy) Door(Direction.All, "Close");
+            if(!cleared && type == roomType.Enemy || type == roomType.Boss) {
+                Door(Direction.All, "Close");
+                roomContent.GetComponent<EnemySetManager>().SpawnEnemies();
+            }
         }
     }
 

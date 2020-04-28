@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum roomType {
-    Start, Empty, Enemy, Boss,
+    Start, Empty, Chest, Enemy, Boss,
 }
 
 public class Room {
@@ -11,6 +11,7 @@ public class Room {
     public roomType type;
 
     public bool doorTop, doorBot, doorLeft, doorRight;
+    public bool doorBossTop, doorBossBot, doorBossLeft, doorBossRight;
 
     public Room(Vector2 _gridPos, roomType _type) {
         gridPos = _gridPos;

@@ -48,5 +48,6 @@ MonoBehaviour:
   roomPrefab: {fileID: 1288992636264050318, guid: c62a7d756efd3bd219e8973c7e7f0f9d,
     type: 3}
   enemySpawnrate: 0.8
+  chestSpawnrate: 0.2
   startProb: 0.2
-  endProb: 0.01
+  endProb: 0
