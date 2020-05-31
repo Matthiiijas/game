@@ -374,6 +374,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 590336424870786531, guid: 9a763ea74d5c774f186a3896f0f165b7,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 590336424870786532, guid: 9a763ea74d5c774f186a3896f0f165b7,
         type: 3}
       propertyPath: m_RootOrder

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3336367542516401178}
   - component: {fileID: 8406158007872885486}
   - component: {fileID: 7645173538663420355}
+  - component: {fileID: 1296695240214352829}
   m_Layer: 9
   m_Name: BigSlime
   m_TagString: Enemy
@@ -206,3 +207,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
+--- !u!114 &1296695240214352829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707946407231198808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e26feabc6d8f576683ce72d69d0dd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -90,4 +90,12 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: PlaySoundRandomVolume
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 3d0ad06101c2cbaf89b09cb0e345f74a,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
