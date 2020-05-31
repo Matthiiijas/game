@@ -50,9 +50,9 @@ MonoBehaviour:
   - {x: -6, y: -2}
   - {x: 6, y: -2}
   objectsToSpawn:
-  - item: {fileID: 2642334901297314131, guid: b8cdff67bfd553946931c2916f8a1ba8, type: 3}
-    probability: 0.33333334
   - item: {fileID: 7590099024403436549, guid: 9b7348f3241fbbd02bec95727b68c13d, type: 3}
-    probability: 0.33333334
+    probability: 0.5
   - item: {fileID: 1226476725392556541, guid: 7f083d28a5d0ea3d4b78e178da425d23, type: 3}
-    probability: 0.33333334
+    probability: 0.35
+  - item: {fileID: 7707946407231198808, guid: bf933748a872053f2b7982f06bc0909f, type: 3}
+    probability: 0.15

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2716212726618427414}
   - component: {fileID: 4873211263741403844}
   - component: {fileID: 5612290967851775191}
+  - component: {fileID: 4527110003841232824}
   - component: {fileID: -8943951873374924009}
   - component: {fileID: -7636894905660651981}
   - component: {fileID: 1846738630923740693}
@@ -190,16 +191,28 @@ MonoBehaviour:
   hitCoolDown: 0.2
   hitCoolDownTimer: 0
   dead: 0
+--- !u!114 &4527110003841232824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590099024403436549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38224b36dd95c8648af5c5305eed958d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   dropCount: 1
   drops:
   - item: {fileID: 5181250419495385213, guid: 26d153eb34312a330835ba380cbeab33, type: 3}
     probability: 0.3
+  - item: {fileID: 8799471185818661518, guid: 3c3197c236d35b759a7188748ebecb3f, type: 3}
+    probability: 0.05
   - item: {fileID: 7865905926999770056, guid: 5eae1af23569f180aa8b3aaf8096fb5e, type: 3}
-    probability: 0.1
-  - item: {fileID: 851239245503529612, guid: 1de0498d3b72dacbfbcaba457fea71e0, type: 3}
-    probability: 0.1
+    probability: 0.2
   - item: {fileID: 0}
-    probability: 0.5
+    probability: 0.45
 --- !u!114 &-8943951873374924009
 MonoBehaviour:
   m_ObjectHideFlags: 0

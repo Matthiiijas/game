@@ -19,11 +19,8 @@ public class HealthController : MonoBehaviour
     [HideInInspector]
     public float hitCoolDownTimer;
     [Space(10)]
+    DropManager dropper;
     public bool dead;
-
-    public int dropCount;
-    public ObjectTable[] drops;
-    int randomNum;
 
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -34,21 +31,14 @@ public class HealthController : MonoBehaviour
         healthPoints = maxHealthPoints;
         hitCoolDownTimer = hitCoolDown;
 
-
+        dropper = GetComponent<DropManager>();
     }
 
     void Update() {
         if(healthPoints > maxHealthPoints) healthPoints = maxHealthPoints;
-        if(healthPoints == 0 && !gameObject.CompareTag("Player")) {
+        if(healthPoints <= 0 && !gameObject.CompareTag("Player")) {
             if(!dead) {
-                for(int i = 0; i < dropCount; i++) {
-                    GameObject itemToDrop = ObjectTable.GetRandom(drops);
-                    if(itemToDrop != null) {
-                        GameObject droppedItem = Instantiate(itemToDrop, transform.position, Quaternion.identity);
-                        droppedItem.GetComponent<Rigidbody2D>().velocity = rb.velocity;
-                        droppedItem.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * 10,ForceMode2D.Impulse);
-                    }
-                }
+                dropper.Drop();
                 StartCoroutine(Die());
             }
             dead = true;

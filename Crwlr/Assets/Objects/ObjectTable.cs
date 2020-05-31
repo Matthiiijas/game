@@ -13,23 +13,21 @@ public class ObjectTable {
         probability = _probability;
     }
     public static GameObject GetRandom(ObjectTable[] table) {
-        if(table.Length > 0) {
+        if (table.Length > 0) {
+            //Validate probabilities
             float probSum = 0;
-            for(int i = 0; i < table.Length; i++) {
+            for (int i = 0; i < table.Length; i++) {
                 probSum += table[i].probability;
             }
-            if(probSum != 1) {
-                if(probSum == 0) Debug.LogError("Please add probabilities for the table!");
+            if (probSum != 1) {
+                if (probSum == 0) Debug.LogError("Please add probabilities for the table!");
                 else {
-                    for(int i = 0; i < table.Length; i++) table[i].probability /= probSum;
+                    for (int i = 0; i < table.Length; i++) table[i].probability /= probSum;
                     Debug.LogWarning("Drop probabilities do not add up to 100%! Scaled all probabilities to make table work");
                 }
             }
-        }
-        else Debug.LogWarning("There are no Objects to choose from");
-
-        if(table.Length > 0) {
-            if(table.Length == 1) {
+            //Pick item
+            if (table.Length == 1) {
                 return table[0].item;
             }
             else {
@@ -39,6 +37,9 @@ public class ObjectTable {
                 return table[randomNum].item;
             }
         }
-        else return null;
+        else {
+            Debug.LogWarning("There are no Objects to choose from");
+            return null;
+        }
     }
 }

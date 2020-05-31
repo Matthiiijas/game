@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8406158007872885486}
   - component: {fileID: 7645173538663420355}
   - component: {fileID: 1296695240214352829}
+  - component: {fileID: 3228185573697648909}
   m_Layer: 9
   m_Name: BigSlime
   m_TagString: Enemy
@@ -190,10 +191,6 @@ MonoBehaviour:
   hitCoolDown: 0.2
   hitCoolDownTimer: 0
   dead: 0
-  dropCount: 2
-  drops:
-  - item: {fileID: 7590099024403436549, guid: 9b7348f3241fbbd02bec95727b68c13d, type: 3}
-    probability: 1
 --- !u!114 &7645173538663420355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,3 +216,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e26feabc6d8f576683ce72d69d0dd51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3228185573697648909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707946407231198808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38224b36dd95c8648af5c5305eed958d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropCount: 2
+  drops:
+  - item: {fileID: 7590099024403436549, guid: 9b7348f3241fbbd02bec95727b68c13d, type: 3}
+    probability: 1
