@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2642334901297314128}
   - component: {fileID: 2642334901297314129}
   - component: {fileID: 2642334901297314130}
-  - component: {fileID: 3861758317900412657}
+  - component: {fileID: 8341017494517061146}
   - component: {fileID: 4782375522455110974}
   - component: {fileID: 2642334901297314134}
   - component: {fileID: 2642334901297314135}
@@ -107,8 +107,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &3861758317900412657
-BoxCollider2D:
+--- !u!70 &8341017494517061146
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,19 +120,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0625, y: 0.49551022}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5555556, y: 0.125}
-    oldSize: {x: 0.9, y: 0.8}
-    newSize: {x: 1.125, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7618811, y: 0.75897956}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0.25}
+  m_Size: {x: 0.4, y: 0.7}
+  m_Direction: 0
 --- !u!50 &4782375522455110974
 Rigidbody2D:
   serializedVersion: 4
@@ -172,16 +162,18 @@ MonoBehaviour:
   hitCoolDown: 0.2
   hitCoolDownTimer: 0
   dead: 0
-  dropCount: 2
+  dropCount: 1
   drops:
   - item: {fileID: 7865905926999770056, guid: 79aa43b3415db1d40a77edeb1acd2ee4, type: 3}
-    probability: 0.2
+    probability: 0.1
   - item: {fileID: 7865905926999770056, guid: 5eae1af23569f180aa8b3aaf8096fb5e, type: 3}
     probability: 0.1
   - item: {fileID: 5181250419495385213, guid: 26d153eb34312a330835ba380cbeab33, type: 3}
-    probability: 0.35
-  - item: {fileID: 8799471185818661518, guid: 3c3197c236d35b759a7188748ebecb3f, type: 3}
-    probability: 0.35
+    probability: 0.2
+  - item: {fileID: 851239245503529612, guid: 1de0498d3b72dacbfbcaba457fea71e0, type: 3}
+    probability: 0.2
+  - item: {fileID: 0}
+    probability: 0.4
 --- !u!114 &2642334901297314135
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum roomType {
+    Start, Empty, Chest, Enemy, Boss, Shop
+}
+
 //Inspired by Six Dot
 public class LevelGenerator : MonoBehaviour
 {
@@ -18,7 +22,8 @@ public class LevelGenerator : MonoBehaviour
     [Space(10)]
 
     [Tooltip("Prefab to use for standard room")]
-    public GameObject roomPrefab;
+    GameObject roomPrefab;
+    public GameObject roomStandard, roomShop;
     [Tooltip("Probability to spawn enemies in a room")]
     public float enemySpawnrate = 0.7f;
     [Tooltip("Probability to spawn a chest in a room")]
@@ -70,13 +75,14 @@ public class LevelGenerator : MonoBehaviour
             checkPos = NewPosition();
             //Choose type of room
             randomPoint = Random.value;
-            if(i < numberOfRooms-1) {
+            if(i < numberOfRooms-2) {
                 if(randomPoint < enemySpawnrate) currentType = roomType.Enemy;
                 else {
                     randomPoint -= enemySpawnrate;
                     if(randomPoint < chestSpawnrate) currentType = roomType.Chest;
                 }
             }
+            else if(i < numberOfRooms-1) currentType = roomType.Shop;
             else currentType = roomType.Boss;
             //Create this room with determined position and type
             rooms[(int) checkPos.x + gridSizeX/2, (int) checkPos.y + gridSizeY/2] = new Room(checkPos,currentType);
@@ -168,9 +174,11 @@ public class LevelGenerator : MonoBehaviour
             drawPos.x *= 16;
             drawPos.y *= 9;
             //Instantiate given prefab and refer its room class
+            if(room.type != roomType.Shop) roomPrefab = roomStandard;
+            else roomPrefab = roomShop;
             GameObject instRoom = Instantiate(roomPrefab, (Vector3) drawPos, Quaternion.identity);
             instRoom.transform.parent = gameObject.transform;
-            instRoom.GetComponent<RoomBuilder>().refRoom = room;
+            instRoom.GetComponent<RoomController>().refRoom = room;
         }
     }
 }

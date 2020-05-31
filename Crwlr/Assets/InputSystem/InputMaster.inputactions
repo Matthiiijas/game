@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Ability",
                     "type": "Button",
                     "id": "bb336605-f7e7-4850-aa58-46e139e42524",
                     "expectedControlType": "",
@@ -182,22 +182,22 @@
                 {
                     "name": "",
                     "id": "255a155d-3199-4244-91f3-910f16149276",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "86f360aa-5cc5-4fe8-9b71-b00fe792bd26",
-                    "path": "<Keyboard>/shift",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "Ability",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

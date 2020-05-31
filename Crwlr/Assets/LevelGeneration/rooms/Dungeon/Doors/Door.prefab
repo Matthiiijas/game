@@ -70,7 +70,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5777258581176554988, guid: 08a53e2a2c3b9c4b19ed564edb3c6d3e,
+  m_Sprite: {fileID: 5213229242370633579, guid: 08a53e2a2c3b9c4b19ed564edb3c6d3e,
     type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 0
@@ -237,13 +237,13 @@ SpriteRenderer:
   m_SortingLayerID: -595085365
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 5777258581176554988, guid: 08a53e2a2c3b9c4b19ed564edb3c6d3e,
+  m_Sprite: {fileID: 5213229242370633579, guid: 08a53e2a2c3b9c4b19ed564edb3c6d3e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.9, y: 1.85}
+  m_Size: {x: 0.9, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -281,7 +281,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.05}
+  m_Offset: {x: 0, y: 0.05}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.5, y: 0}

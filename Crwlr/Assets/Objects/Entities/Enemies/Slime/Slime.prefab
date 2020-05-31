@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSound: {fileID: 8300000, guid: de1914b37f4b181f79a83ca9554657da, type: 3}
+  attackDamage: 1
   speed: 5
   attackSpeed: 5
   retreatSpeed: 3
@@ -166,6 +167,9 @@ MonoBehaviour:
   attackWaitTime: 0.2
   knockbackStrength: 0
   animationMinVelocity: 0.1
+  randomColor: 1
+  hueMin: 100
+  hueMax: 150
 --- !u!114 &5612290967851775191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,14 +185,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: ac0e424ec30c862608c0b24ece503df1, type: 3}
   healthPoints: 3
   maxHealthPoints: 3
+  invulnerable: 0
   hitCoolDown: 0.2
   hitCoolDownTimer: 0
   dead: 0
   dropCount: 1
   drops:
   - item: {fileID: 5181250419495385213, guid: 26d153eb34312a330835ba380cbeab33, type: 3}
-    probability: 0.5
+    probability: 0.3
   - item: {fileID: 7865905926999770056, guid: 5eae1af23569f180aa8b3aaf8096fb5e, type: 3}
+    probability: 0.1
+  - item: {fileID: 851239245503529612, guid: 1de0498d3b72dacbfbcaba457fea71e0, type: 3}
+    probability: 0.1
+  - item: {fileID: 0}
     probability: 0.5
 --- !u!114 &-8943951873374924009
 MonoBehaviour:

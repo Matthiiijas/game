@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum roomType {
-    Start, Empty, Chest, Enemy, Boss,
-}
+[System.Serializable]
 
 public class Room {
     public Vector2 gridPos;

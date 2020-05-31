@@ -21,10 +21,13 @@ public class PlayerController : MonoBehaviour
     float collectEnemiesTimer;
     List<GameObject> collectedEntities = new List<GameObject>();
     bool attacking;
-    //public bool swordFront;
 
-    //Shoot
-    bool shooting;
+    //Dash
+    public float dashSpeed;
+    public AudioClip dashClip;
+    bool dashing;
+    public float dashTime;
+    public float dashKnockbackStrength;
 
     //Move
     InputMaster controls;
@@ -49,48 +52,43 @@ public class PlayerController : MonoBehaviour
         controls = new InputMaster();
         controls.Player.Move.performed += ctx => inputMove = ctx.ReadValue<Vector2>();
         controls.Player.Attack.started += ctx => Attack();
-        controls.Player.Shoot.started += ctx => shooting = true;
-        controls.Player.Shoot.canceled += ctx => shooting = false;
+        controls.Player.Ability.canceled += ctx => StartCoroutine(Dash());
         //Setup Attack Cooldown Timer
         attackCoolDownTimer = attackCoolDown;
     }
 
     void Update() {
-        //if(swordFront) Weapon.GetComponent<SpriteRenderer>().sortingOrder = sr.sortingOrder + 5;
-        //else Weapon.GetComponent<SpriteRenderer>().sortingOrder = sr.sortingOrder - 5;
-
         //Attack Cooldown Timer
         if(attackCoolDownTimer > 0) attackCoolDownTimer -= Time.deltaTime;
 
         //Play Idle and Movement animations
         Animate();
 
-        coinCount.GetComponent<TextMeshProUGUI>().SetText(moneyCount.ToString());
+        if(coinCount != null) coinCount.GetComponent<TextMeshProUGUI>().SetText(moneyCount.ToString());
     }
 
     void FixedUpdate () {
+        if(Input.GetKey("u")) {
+            GetComponent<HealthController>().maxHealthPoints = 20;
+            GetComponent<HealthController>().healthPoints = 20;
+            GetComponent<ManaController>().maxManaPoints = 20;
+            GetComponent<ManaController>().manaPoints = 20;
+        }
 
         //Movement
-        if(canMove) rb.AddForce(inputMove * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
-
-        if(shooting) Aim();
-        else Shoot();
-
+        if(canMove) rb.AddForce(inputMove.normalized * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        if(inputMove != Vector2.zero) remainMove = inputMove.normalized;
     }
 
     void Animate() {
-        //Define last direction
-        if(inputMove != Vector2.zero) {
-            if(Mathf.Abs(inputMove.x) < Mathf.Abs(inputMove.y)) remainMove = new Vector2(0, inputMove.y);
-            else  remainMove = new Vector2(inputMove.x, 0);
-            remainMove.Normalize();
-        }
+        if(inputMove != Vector2.zero) remainMove = inputMove;
         //Set Values for Animator
-        anim.SetFloat("MoveX", rb.velocity.x);
-        anim.SetFloat("MoveY", rb.velocity.y);
-        anim.SetFloat("remainX", remainMove.x);
-        anim.SetFloat("remainY", remainMove.y);
-        anim.SetFloat("Velocity", inputMove.magnitude);
+        anim.SetFloat("MoveX", Cardinalize(rb.velocity).x);
+        anim.SetFloat("MoveY", Cardinalize(rb.velocity).y);
+        anim.SetFloat("remainX", Cardinalize(remainMove).x);
+        anim.SetFloat("remainY", Cardinalize(remainMove).y);
+        anim.SetFloat("Velocity", rb.velocity.sqrMagnitude);
+        //test
     }
 
     void Attack() {
@@ -108,7 +106,7 @@ public class PlayerController : MonoBehaviour
                 collectEnemiesTimer -= Time.deltaTime;
             }
             foreach(GameObject entity in collectedEntities) {
-                if(entity.CompareTag("Enemy")) entity.GetComponent<DamageManager>().TakeDamage(1,remainMove,knockbackStrength);
+                if(entity.CompareTag("Enemy")) entity.GetComponent<HealthController>().TakeDamage(1,remainMove,knockbackStrength);
                 else entity.GetComponent<Rigidbody2D>().AddForce(remainMove * knockbackStrength);
             }
             anim.SetTrigger("Attack");
@@ -118,18 +116,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Aim() {
-        canMove = false;
+    IEnumerator Dash() {
+        if(GetComponent<ManaController>().manaPoints > 0) {
+            dashing = true;
+            GetComponent<HealthController>().invulnerable = true;
+            AudioSource.PlayClipAtPoint(dashClip, transform.position, 1);
+            rb.AddForce(remainMove * dashSpeed, ForceMode2D.Impulse);
+            GetComponent<ManaController>().ModifyMana(-1);
+            yield return new WaitForSeconds(dashTime);
+            dashing = false;
+            GetComponent<HealthController>().invulnerable = false;
+        }
     }
 
-    void Shoot() {
-        canMove = true;
+    void OnCollisionEnter2D(Collision2D col) {
+        if(dashing && col.gameObject.CompareTag("Enemy")) {
+            col.gameObject.GetComponent<HealthController>().TakeDamage(1, remainMove, dashKnockbackStrength);
+        }
     }
 
     //Draw attackRange circle
     void OnDrawGizmosSelected() {
         Weapon = transform.Find("Weapon");
         Gizmos.DrawWireSphere(Weapon.position, attackRange);
+    }
+
+    Vector2 Cardinalize(Vector2 vector) {
+        if(vector != Vector2.zero) {
+            if(Mathf.Abs(vector.x) < Mathf.Abs(vector.y)) vector = new Vector2(0, vector.y);
+            else vector = new Vector2(vector.x, 0);
+        }
+        return vector.normalized;
     }
 
     void OnEnable () {

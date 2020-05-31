@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Update() {
-        if(GameObject.FindGameObjectWithTag("Player").GetComponent<DamageManager>().healthPoints == 0) {
+        if(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().healthPoints == 0) {
             SceneManager.LoadScene(0);
         }
     }

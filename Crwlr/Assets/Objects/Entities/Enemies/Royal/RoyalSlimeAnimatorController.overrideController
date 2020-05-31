@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RoyalSlimeAnimatorController
+  m_Controller: {fileID: 9100000, guid: 9d0208ae3d6560f6fbbb7c8fa28de80b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 6b0f08e0273772947a39bbbf1b1c0479, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c06aee32dc5d006ce9c29278988008db, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 462db69fe14f7035b8b0ecaeb9ba231b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cc1d5eb1808101ca684b22b818795ac9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: aaa487d09f8f7ba8f9aab204d18dea83, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ef89d94363dbdc8caacfc731f24ac41, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e06f1c8b02b8250fc9713e99d37848b1, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bbfe120c9bcf34520bdf00c66ac61fb4, type: 2}

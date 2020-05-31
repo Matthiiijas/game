@@ -45,9 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldSize: {x: 10, y: 10}
   numberOfRooms: 10
-  roomPrefab: {fileID: 1288992636264050318, guid: c62a7d756efd3bd219e8973c7e7f0f9d,
+  roomStandard: {fileID: 1288992636264050318, guid: c62a7d756efd3bd219e8973c7e7f0f9d,
     type: 3}
-  enemySpawnrate: 0.8
+  roomShop: {fileID: 1288992636264050318, guid: 4a5498230c2f679edbcac9d1123e7da8,
+    type: 3}
+  enemySpawnrate: 0.7
   chestSpawnrate: 0.2
   startProb: 0.2
   endProb: 0

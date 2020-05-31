@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 2f8bc0b740d6d05a7b756ab73b825f22
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5767089007620137260
+    second: Big_Jump_0
+  - first:
+      213: 6141293025121477484
+    second: Big_Jump_1
+  - first:
+      213: -7352564219802482583
+    second: Big_Jump_2
+  - first:
+      213: -7139560536883328174
+    second: Big_Jump_3
+  - first:
+      213: -1669577048909255857
+    second: Big_Jump_4
+  - first:
+      213: 5791320335488509849
+    second: Big_Jump_5
+  - first:
+      213: 324839314212527601
+    second: Big_Jump_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +61,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +85,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +106,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Big_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 46
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.27906978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4deddb85a1f27ffa0800000000000000
+      internalID: -5767089007620137260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2
+        width: 46
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.29268292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6323f7e7714a3550800000000000000
+      internalID: 6141293025121477484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 3
+        width: 46
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.31578946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9680d623cc176f990800000000000000
+      internalID: -7352564219802482583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 3
+        width: 46
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25531915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b0caac48f2bec90800000000000000
+      internalID: -7139560536883328174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 3
+        width: 44
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21818182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4b6e92158874d8e0800000000000000
+      internalID: -1669577048909255857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 3
+        width: 44
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19672132}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997e9415927ee5050800000000000000
+      internalID: 5791320335488509849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 52
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fd18bc92af028400800000000000000
+      internalID: 324839314212527601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

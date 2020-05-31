@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 9098b2209610ae6c3be0e55bbfa5ccf1
+guid: 6f615c812f27cfb94ae77fbc29e8b629
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3306626047526137379
+    second: SkullLeft_0
+  - first:
+      213: 1902937481256489994
+    second: SkullLeft_1
+  - first:
+      213: 1748809562905416515
+    second: SkullLeft_2
+  - first:
+      213: 776519170678335920
+    second: SkullLeft_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +97,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SkullLeft_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 11
+        height: 21
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e69d7fede73ed20800000000000000
+      internalID: 3306626047526137379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullLeft_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 11
+        height: 22
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04d1189e87986a10800000000000000
+      internalID: 1902937481256489994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullLeft_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 11
+        height: 22
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34398c82805054810800000000000000
+      internalID: 1748809562905416515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullLeft_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 11
+        height: 23
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.26086956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b920915210c6ca00800000000000000
+      internalID: 776519170678335920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -11,11 +11,12 @@ public class SlimeController : MonoBehaviour
 
     public AudioClip attackSound;
     AudioSource source;
+    public int attackDamage;
 
     public float speed, attackSpeed, retreatSpeed;
 
     bool attacking;
-    DamageManager damageManager;
+    HealthController HealthController;
 
     public float currentDistance;
     public float stopDistance = 1.5f;
@@ -26,15 +27,18 @@ public class SlimeController : MonoBehaviour
 
     public float animationMinVelocity = 0.1f;
 
+    public bool randomColor = false;
+    public float hueMin, hueMax;
+
     void Start() {
         source = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        damageManager = GetComponent<DamageManager>();
+        HealthController = GetComponent<HealthController>();
         mat = GetComponent<SpriteRenderer>().material;
 
-        mat.SetColor("_Color",Random.ColorHSV(100f/256f, 150f/256f, 0.5f, 0.7f, 0.5f, 0.7f));
+        if(randomColor) mat.SetColor("_Color",Random.ColorHSV(hueMin/256f, hueMax/256f, 0.5f, 0.7f, 1f, 1f));
     }
 
     void FixedUpdate() {
@@ -45,7 +49,7 @@ public class SlimeController : MonoBehaviour
             currentDistance = Vector3.Distance(player.position, transform.position);
             Vector2 force = (Vector2) (player.position - transform.position).normalized * Time.fixedDeltaTime * speed;
             if(currentDistance > stopDistance) rb.AddForce(force, ForceMode2D.Impulse);
-            else if(damageManager.hitCoolDownTimer <= 0) StartCoroutine(Attack(player.position));
+            else if(HealthController.hitCoolDownTimer <= 0) StartCoroutine(Attack(player.position));
         }
     }
 
@@ -61,8 +65,8 @@ public class SlimeController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col) {
-        if(attacking && !GetComponent<DamageManager>().dead && col.gameObject.CompareTag("Player")) {
-            col.gameObject.GetComponent<DamageManager>().TakeDamage(1, player.position - transform.position, knockbackStrength);
+        if(attacking && !GetComponent<HealthController>().dead && col.gameObject.CompareTag("Player")) {
+            col.gameObject.GetComponent<HealthController>().TakeDamage(attackDamage, player.position - transform.position, knockbackStrength);
             rb.AddForce((Vector2) (-player.position + transform.position).normalized * retreatSpeed, ForceMode2D.Impulse);
         }
     }

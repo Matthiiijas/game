@@ -14,7 +14,7 @@ public class HeartController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D col) {
         if(col.gameObject.CompareTag("Player") && Age >= minAge) {
-            DamageManager playerDamage = col.gameObject.GetComponent<DamageManager>();
+            HealthController playerDamage = col.gameObject.GetComponent<HealthController>();
             if(playerDamage.healthPoints < playerDamage.maxHealthPoints) {
                 playerDamage.healthPoints += heartValue;
                 Destroy(gameObject);

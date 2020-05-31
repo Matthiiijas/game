@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: acbf1f144db5687d188fce295a37a8fe
+guid: f884922aad5da3ad7a69c4aa2228d946
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8414027399957070682
+    second: SkullRight_0
+  - first:
+      213: -5561482403553964066
+    second: SkullRight_1
+  - first:
+      213: -8068964115089479432
+    second: SkullRight_2
+  - first:
+      213: -1409130601158799222
+    second: SkullRight_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -85,7 +97,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SkullRight_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 11
+        height: 21
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.2857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5348d04751a4c470800000000000000
+      internalID: 8414027399957070682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullRight_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 11
+        height: 22
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf849f4835a1d2b0800000000000000
+      internalID: -5561482403553964066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullRight_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 11
+        height: 22
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.27272728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8a7b673e7450090800000000000000
+      internalID: -8068964115089479432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SkullRight_3
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 11
+        height: 23
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.26086956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a801cc32f23c17ce0800000000000000
+      internalID: -1409130601158799222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

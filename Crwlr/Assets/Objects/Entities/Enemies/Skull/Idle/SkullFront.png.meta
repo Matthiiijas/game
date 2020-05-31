@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da02b64b8adc862879865885912b8afe
+guid: 30d3ed0a1c5d4152dac2c31b4ec02a94
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -104,10 +104,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 0
-        width: 12
-        height: 18
+        width: 11
+        height: 21
       alignment: 9
-      pivot: {x: 0.5, y: 0.33333334}
+      pivot: {x: 0.45454547, y: 0.2857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,12 +123,12 @@ TextureImporter:
       name: SkullFront_1
       rect:
         serializedVersion: 2
-        x: 15
+        x: 17
         y: 0
         width: 11
-        height: 18
+        height: 22
       alignment: 9
-      pivot: {x: 0.54545456, y: 0.33333334}
+      pivot: {x: 0.45454547, y: 0.27272728}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: SkullFront_2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 32
         y: 0
         width: 11
-        height: 18
+        height: 22
       alignment: 9
-      pivot: {x: 0.54545456, y: 0.33333334}
+      pivot: {x: 0.45454547, y: 0.27272728}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,10 +167,10 @@ TextureImporter:
         serializedVersion: 2
         x: 47
         y: 0
-        width: 12
-        height: 18
+        width: 11
+        height: 23
       alignment: 9
-      pivot: {x: 0.5833334, y: 0.33333334}
+      pivot: {x: 0.45454547, y: 0.26086956}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
