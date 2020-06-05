@@ -1,22 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject inGameOverlay, pauseMenu;
+    public GameObject inGameOverlay, pauseMenu, gameOverScreen;
     public bool gamePaused;
 
     InputMaster controls;
     void Awake() {
+        Time.timeScale = 1;
         controls = new InputMaster();
         controls.Player.Pause.started += ctx => PauseGame();
     }
 
     void Update() {
-        if(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().healthPoints == 0) {
-            SceneManager.LoadScene(0);
+        if(GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().healthPoints <= 0) {
+            GameOver();
         }
     }
 
@@ -29,8 +31,18 @@ public class GameManager : MonoBehaviour
         else Time.timeScale = 1;
     }
 
-    public void FinishLevel() {
-        SceneManager.LoadScene(1);
+    void GameOver() {
+        inGameOverlay.SetActive(false);
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0.001f;
+    }
+
+    public void GoToMainMenu() {
+        SceneManager.LoadScene(0);
+    }
+
+    public void RestartLevel() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void OnEnable() {

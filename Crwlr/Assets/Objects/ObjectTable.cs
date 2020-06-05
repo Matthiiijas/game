@@ -33,7 +33,7 @@ public class ObjectTable {
             else {
                 int randomNum;
                 do randomNum = Mathf.RoundToInt((Random.value) * table.Length);
-                while (randomNum == table.Length || Random.value < table[randomNum].probability);
+                while (randomNum == table.Length || Random.value >= table[randomNum].probability);
                 return table[randomNum].item;
             }
         }

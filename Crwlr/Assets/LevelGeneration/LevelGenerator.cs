@@ -34,6 +34,9 @@ public class LevelGenerator : MonoBehaviour
     float currentProb = 0.2f;
     float percentageOfRooms;
 
+    [Space(20)]
+    public ObjectTable[] enemyGenerators;
+
     Room[,] rooms;
     List<Vector2> takenPositions = new List<Vector2>();
 
@@ -179,6 +182,8 @@ public class LevelGenerator : MonoBehaviour
             GameObject instRoom = Instantiate(roomPrefab, (Vector3) drawPos, Quaternion.identity);
             instRoom.transform.parent = gameObject.transform;
             instRoom.GetComponent<RoomController>().refRoom = room;
+            if(room.type == roomType.Enemy) instRoom.GetComponent<RoomController>().roomContent = ObjectTable.GetRandom(enemyGenerators);
+
         }
     }
 }

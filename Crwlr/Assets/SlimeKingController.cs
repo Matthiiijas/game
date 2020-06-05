@@ -19,6 +19,10 @@ public class SlimeKingController : MonoBehaviour
     public GameObject SlimeKingProjectile;
     public float projectileSpeed;
 
+    void OnDrawGizmosSelected() {
+        Gizmos.DrawWireSphere(transform.position, jumpHitRadius);
+    }
+
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
@@ -34,7 +38,7 @@ public class SlimeKingController : MonoBehaviour
     void JumpDealDamage() {
         float distance = Vector3.Distance(player.position, transform.position);
         if(distance < jumpHitRadius) {
-            player.GetComponent<HealthController>().TakeDamage(Mathf.RoundToInt(2*(distance/jumpHitRadius)), playerPos, jumpKnockback);
+            player.GetComponent<HealthController>().TakeDamage(2, playerPos, jumpKnockback);
         }
     }
 

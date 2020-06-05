@@ -44,4 +44,10 @@ public class SkullController : MonoBehaviour
         rb.AddForce(-direction.normalized * shootKnockback, ForceMode2D.Impulse);
         yield return null;
     }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        if(!GetComponent<HealthController>().dead && col.gameObject.CompareTag("Player")) {
+            col.gameObject.GetComponent<HealthController>().TakeDamage(1, playerPos, 5);
+        }
+    }
 }

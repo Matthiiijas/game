@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7796421323285722449}
   - component: {fileID: 7258320435661300908}
+  - component: {fileID: 3359455751242941203}
   m_Layer: 0
   m_Name: Random4Enemies
   m_TagString: Untagged
@@ -43,16 +44,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3962239c3507f706953fa77b6b6ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Active: 0
-  spawnPositions:
-  - {x: 6, y: 2}
-  - {x: -6, y: 2}
-  - {x: -6, y: -2}
-  - {x: 6, y: -2}
+  spawnPositions: []
+  NumOfRandomPositions: 4
+  randomPositionBoundries: {x: 13.5, y: 6.5}
   objectsToSpawn:
   - item: {fileID: 7590099024403436549, guid: 9b7348f3241fbbd02bec95727b68c13d, type: 3}
     probability: 0.5
   - item: {fileID: 1226476725392556541, guid: 7f083d28a5d0ea3d4b78e178da425d23, type: 3}
-    probability: 0.35
+    probability: 0.3
   - item: {fileID: 7707946407231198808, guid: bf933748a872053f2b7982f06bc0909f, type: 3}
-    probability: 0.15
+    probability: 0.1
+  - item: {fileID: 0}
+    probability: 0.1
+--- !u!61 &3359455751242941203
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111887583544340137}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 18, y: 11}
+  m_EdgeRadius: 0

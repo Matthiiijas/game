@@ -12,7 +12,7 @@ public class MimicController : MonoBehaviour
 
     public bool jumping;
 
-    public float jumpThrust;
+    public float jumpThrust, retreatSpeed;
     public float jumpCooldown, jumpCooldownTimer;
 
     void Start() {
@@ -38,6 +38,7 @@ public class MimicController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col) {
         if(col.gameObject.CompareTag("Player")) {
             col.gameObject.GetComponent<HealthController>().TakeDamage(1,playerPos,rb.velocity.magnitude);
+            rb.AddForce(-playerPos * retreatSpeed, ForceMode2D.Impulse);
         }
     }
 }

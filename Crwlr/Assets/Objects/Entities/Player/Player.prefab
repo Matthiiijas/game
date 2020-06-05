@@ -275,11 +275,9 @@ MonoBehaviour:
   healthPoints: 0
   maxHealthPoints: 6
   invulnerable: 0
-  hitCoolDown: 1
+  hitCoolDown: 0.5
   hitCoolDownTimer: 0
   dead: 0
-  dropCount: 0
-  drops: []
 --- !u!114 &2130139953046852973
 MonoBehaviour:
   m_ObjectHideFlags: 0

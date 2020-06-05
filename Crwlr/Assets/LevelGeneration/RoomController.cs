@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Direction {
+public enum Direction {
     West, North, East, South, All
 }
 
 public class RoomController : MonoBehaviour
 {
-    GameObject doorLeft, doorRight, doorBot, doorTop;
+    public GameObject doorLeft, doorRight, doorBot, doorTop;
 
     Transform player;
     Vector2 playerPos;
@@ -25,15 +25,16 @@ public class RoomController : MonoBehaviour
     [Tooltip("Type of room")]
     public roomType type;
     [Tooltip("Player is inside this room")]
-    public bool roomActive = false;
-    [Tooltip("Enemies in this room ar defeated")]
+    public bool playerInRoom = false;
+    [Tooltip("Enemies in this room are defeated")]
+    public int enemyCount;
     public bool cleared = false;
 
     public ObjectTable[] enemyPresets;
     public GameObject chestObject;
     public GameObject bossObject;
 
-    GameObject roomContent;
+    public GameObject roomContent;
 
     void Start() {
         //Get GameObject Components
@@ -42,11 +43,6 @@ public class RoomController : MonoBehaviour
         //Setup refence Room class and roomtype
         if(refRoom == null) refRoom = new Room(transform.position, type);
         else type = refRoom.type;
-        //Get door objects
-        doorLeft = transform.Find("DoorLeft").gameObject;
-        doorRight = transform.Find("DoorRight").gameObject;
-        doorBot = transform.Find("DoorBot").gameObject;
-        doorTop = transform.Find("DoorTop").gameObject;
         //Disable doors
         if(!refRoom.doorLeft) DisableDoor(doorLeft);
         if(!refRoom.doorRight) DisableDoor(doorRight);
@@ -70,14 +66,24 @@ public class RoomController : MonoBehaviour
         //Define playsers position relative to room
         playerPos = (Vector2) (player.position - transform.position);
 
-        if(type == roomType.Enemy) {
-            if(roomContent.GetComponent<RoomContentGenerator>().Active && roomContent.transform.childCount == 0) {
+        enemyCount = 0;
+        foreach(Transform child in transform) {
+            if(child.CompareTag("Enemy")) enemyCount++;
+        }
+
+        if(playerInRoom) {
+            if(enemyCount >= 1) {
+                Door(Direction.All, "Close");
+            }
+            else {
                 Door(Direction.All, "Open");
                 cleared = true;
             }
         }
-        if(type == roomType.Boss) {
-            if(roomContent == null) gameManager.FinishLevel();
+
+        if(type == roomType.Boss && playerInRoom) {
+            if(roomContent == null) gameManager.GoToMainMenu();
+            roomContent.SetActive(true);
         }
     }
 
@@ -127,42 +133,12 @@ public class RoomController : MonoBehaviour
         door.GetComponent<SpriteRenderer>().enabled = false;
         door.transform.Find("DoorMask").gameObject.SetActive(false);
     }
-    //Transition from one to another room
-    void Transition(Direction direction) {
-        switch(direction) {
-            case Direction.West:
-                player.position += new Vector3(-transitionDistance,0,0); break;
-            case Direction.East:
-                player.position += new Vector3(transitionDistance,0,0); break;
-            case Direction.South:
-                player.position += new Vector3(0,-transitionDistance,0); break;
-            case Direction.North:
-                player.position += new Vector3(0,transitionDistance,0); break;
-        }
-    }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
-            roomActive = true;
-            if(!cleared && type == roomType.Enemy) {
-                Door(Direction.All, "Close");
-                roomContent.GetComponent<RoomContentGenerator>().SpawnEnemies();
-            }
-            if(!cleared && type == roomType.Boss) {
-                Door(Direction.All, "Close");
-                roomContent.SetActive(true);
-            }
-        }
+        if(other.CompareTag("Player"))  playerInRoom = true;
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
-            roomActive = false;
-            if(playerPos.x < -1) playerLeft = Direction.West;
-            else if(playerPos.x > 1) playerLeft = Direction.East;
-            else if(playerPos.y < -1) playerLeft = Direction.South;
-            else if(playerPos.y > 1) playerLeft = Direction.North;
-            Transition(playerLeft);
-        }
+        if(other.CompareTag("Player")) playerInRoom = false;
     }
 }

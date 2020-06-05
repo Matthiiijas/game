@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackStrength: 10
-  speed: 40
+  speed: 30
   jumpHitRadius: 2
-  jumpKnockback: 20
+  jumpKnockback: 40
   bossActionWaitTime: 3
   RoyalSlime: {fileID: 877529936197057758, guid: 39036022a3438c955a6f105e9acc822b,
     type: 3}
@@ -116,7 +116,7 @@ MonoBehaviour:
   rightOffset: {x: 1.2, y: -0.45}
   SlimeKingProjectile: {fileID: 6303509097282202616, guid: 623cb7053ba38ea22b77ff7de3da0ae9,
     type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 5
 --- !u!114 &523762432049338250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38224b36dd95c8648af5c5305eed958d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropEnemy: 0
   dropCount: 0
   drops: []
 --- !u!1 &8062382720406139983

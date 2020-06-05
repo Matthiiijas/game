@@ -4,22 +4,37 @@ using UnityEngine;
 
 public class RoomContentGenerator : MonoBehaviour
 {
-    public bool Active;
-    public Vector2[] spawnPositions;
+    public List<Vector2> spawnPositions;
+    public int NumOfRandomPositions;
+    public Vector2 randomPositionBoundries = new Vector2(13.5f, 6.5f);
+
     public ObjectTable[] objectsToSpawn;
 
     void OnDrawGizmosSelected() {
-        for(int i = 0; i < spawnPositions.Length; i++) {
+        for(int i = 0; i < spawnPositions.Count; i++) {
             Gizmos.DrawIcon(spawnPositions[i] + (Vector2) transform.position, "sv_icon_dot3_pix16_gizmo", true);
         }
-        Gizmos.DrawWireCube(transform.position, new Vector3(16,9,0));
+        Gizmos.DrawWireCube(transform.position, (Vector3)randomPositionBoundries);
     }
 
-    public void SpawnEnemies() {
-        for(int i = 0; i < spawnPositions.Length; i++) {
-            GameObject curObject = Instantiate(ObjectTable.GetRandom(objectsToSpawn), spawnPositions[i] + (Vector2) transform.position, Quaternion.identity);
-            curObject.transform.SetParent(gameObject.transform);
+    void Start() {
+        for(int i = 0; i < NumOfRandomPositions; i++) {
+            spawnPositions.Add(new Vector2(randomPositionBoundries.x * (Random.value-0.5f), randomPositionBoundries.y * (Random.value-0.5f)));
         }
-        Active = true;
+    }
+
+    public void Activate() {
+        for(int i = 0; i < spawnPositions.Count; i++) {
+            GameObject enemyToSpawn = ObjectTable.GetRandom(objectsToSpawn);
+            if(enemyToSpawn != null) {
+                GameObject curObject = Instantiate(enemyToSpawn, spawnPositions[i] + (Vector2) transform.position, Quaternion.identity);
+                curObject.transform.SetParent(gameObject.transform.parent);
+            }
+        }
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Player")) Activate();
     }
 }

@@ -8,10 +8,9 @@ public class ChestController : MonoBehaviour
 {
     Animator anim;
 
-    public GameObject[] dropList;
-    GameObject currentItem;
-    public int numberOfItems;
-    public float throughOutStrength = 1.0f;
+    public GameObject Mimic;
+    public float mimicSpawnProb;
+
     bool open;
 
     void Start() {
@@ -20,11 +19,15 @@ public class ChestController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col) {
         if(col.gameObject.CompareTag("Player") && !open) {
-            anim.SetTrigger("Open");
-            open = true;
-            for (int i = 0; i < numberOfItems; i++) {
-                currentItem = Instantiate(dropList[Random.Range(0,dropList.Length)], transform.position, Quaternion.identity);
-                currentItem.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * throughOutStrength, ForceMode2D.Impulse);
+            if(Random.value < mimicSpawnProb) {
+                GameObject mimic = Instantiate(Mimic, transform.position, Quaternion.identity);
+                mimic.transform.parent = transform.parent;
+                Destroy(gameObject);
+            }
+            else {
+                anim.SetTrigger("Open");
+                open = true;
+                GetComponent<DropManager>().Drop();
             }
         }
     }

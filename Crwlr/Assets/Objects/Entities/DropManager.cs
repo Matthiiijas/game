@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DropManager : MonoBehaviour
 {
+    public bool dropEnemy;
     public int dropCount;
     public ObjectTable[] drops;
     int randomNum;
@@ -15,6 +16,7 @@ public class DropManager : MonoBehaviour
                 GameObject droppedItem = Instantiate(itemToDrop, transform.position, Quaternion.identity);
                 droppedItem.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
                 droppedItem.GetComponent<Rigidbody2D>().AddForce(Random.insideUnitCircle * 10,ForceMode2D.Impulse);
+                if(dropEnemy) droppedItem.transform.parent = transform.parent;
             }
         }
     }
